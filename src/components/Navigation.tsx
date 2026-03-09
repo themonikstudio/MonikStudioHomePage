@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import monikLogo from '../images/monik-logo.svg';
-import { 
-  Twitter, 
-  Youtube, 
-  Facebook, 
-  Pin, 
-  Gamepad2 
+import {
+  Twitter,
+  Youtube,
+  Facebook,
+  Pin,
+  Gamepad2,
+  Menu,
+  X
 } from 'lucide-react';
 import { TikTokIcon, PinterestIcon } from './Icons';
 
@@ -14,6 +16,7 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
   const location = useLocation();
   const navigate = useNavigate();
   const isDark = variant === 'dark';
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, to: string) => {
     // If it's an internal hash link
@@ -37,11 +40,10 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
   };
 
   return (
-    <header className={`sticky top-0 z-50 backdrop-blur-xl border-b transition-all duration-500 ${
-      isDark 
-        ? 'bg-slate-900/80 border-white/10 text-white shadow-[0_0_30px_rgba(0,0,0,0.3)]' 
+    <header className={`sticky top-0 z-50 backdrop-blur-xl border-b transition-all duration-500 ${isDark
+        ? 'bg-slate-900/80 border-white/10 text-white shadow-[0_0_30px_rgba(0,0,0,0.3)]'
         : 'bg-white/70 border-slate-100 text-slate-900'
-    }`}>
+      }`}>
       {/* Gaming Pattern Overlay for Dark Variant */}
       {isDark && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
@@ -57,13 +59,12 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
 
       <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between relative z-10">
         <Link to="/" onClick={(e) => handleNavClick(e as any, '/')} className="flex items-center gap-4 group">
-          <div className={`w-16 h-16 rounded-2xl overflow-hidden border-2 shadow-md group-hover:scale-105 transition-transform bg-white ${
-            isDark ? 'border-slate-500/30 shadow-slate-500/10' : 'border-slate-100'
-          }`}>
-            <img 
+          <div className={`w-16 h-16 rounded-2xl overflow-hidden border-2 shadow-md group-hover:scale-105 transition-transform bg-white ${isDark ? 'border-slate-500/30 shadow-slate-500/10' : 'border-slate-100'
+            }`}>
+            <img
               src={monikLogo}
-              alt="Logo" 
-              className="w-full h-full object-cover" 
+              alt="Logo"
+              className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
@@ -71,27 +72,54 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
               }}
             />
           </div>
-          <span className={`font-display font-black text-2xl tracking-tighter transition-colors ${
-            isDark ? 'text-white' : 'text-slate-900'
-          }`}>Monik Studio</span>
+          <span className={`font-display font-black text-2xl tracking-tighter transition-colors ${isDark ? 'text-white' : 'text-slate-900'
+            }`}>Monik Studio</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 font-bold text-sm uppercase tracking-wider">
-          <Link to="/" onClick={(e) => handleNavClick(e as any, '/')} className={`transition-colors ${
-            isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
-          }`}>Home</Link>
-          <Link to="/#about" onClick={(e) => handleNavClick(e as any, '/#about')} className={`transition-colors ${
-            isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
-          }`}>About</Link>
-          <Link to="/#games" onClick={(e) => handleNavClick(e as any, '/#games')} className={`transition-colors ${
-            isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
-          }`}>Portfolio</Link>
-          <Link to="/#services" onClick={(e) => handleNavClick(e as any, '/#services')} className={`transition-colors ${
-            isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
-          }`}>Services</Link>
+          <Link to="/" onClick={(e) => handleNavClick(e as any, '/')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+            }`}>Home</Link>
+          <Link to="/#about" onClick={(e) => handleNavClick(e as any, '/#about')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+            }`}>About</Link>
+          <Link to="/#games" onClick={(e) => handleNavClick(e as any, '/#games')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+            }`}>Portfolio</Link>
+          <Link to="/#services" onClick={(e) => handleNavClick(e as any, '/#services')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+            }`}>Services</Link>
           <Link to="/#contact" onClick={(e) => handleNavClick(e as any, '/#contact')} className="bg-slate-900 text-white px-6 py-2.5 rounded-xl hover:bg-slate-800 transition-all shadow-lg shadow-slate-200 hover:shadow-slate-300 active:scale-95">Contact</Link>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 rounded-xl transition-colors hover:bg-slate-100 dark:hover:bg-white/10"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? (
+            <X size={24} className={isDark ? "text-white" : "text-slate-900"} />
+          ) : (
+            <Menu size={24} className={isDark ? "text-white" : "text-slate-900"} />
+          )}
+        </button>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className={`md:hidden absolute top-full left-0 w-full border-b backdrop-blur-xl shadow-lg transition-all ${isDark
+            ? 'bg-slate-900/95 border-white/10 text-white'
+            : 'bg-white/95 border-slate-100 text-slate-900'
+          }`}>
+          <div className="flex flex-col p-6 gap-6 font-bold text-lg uppercase tracking-wider">
+            <Link to="/" onClick={(e) => { handleNavClick(e as any, '/'); setIsMobileMenuOpen(false); }} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+              }`}>Home</Link>
+            <Link to="/#about" onClick={(e) => { handleNavClick(e as any, '/#about'); setIsMobileMenuOpen(false); }} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+              }`}>About</Link>
+            <Link to="/#games" onClick={(e) => { handleNavClick(e as any, '/#games'); setIsMobileMenuOpen(false); }} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+              }`}>Portfolio</Link>
+            <Link to="/#services" onClick={(e) => { handleNavClick(e as any, '/#services'); setIsMobileMenuOpen(false); }} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+              }`}>Services</Link>
+            <Link to="/#contact" onClick={(e) => { handleNavClick(e as any, '/#contact'); setIsMobileMenuOpen(false); }} className="bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition-all text-center">Contact</Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
@@ -112,10 +140,10 @@ export const Footer = () => {
         <div className="flex flex-col items-center md:items-start gap-8">
           <div className="flex items-center gap-5">
             <Link to="/" onClick={(e) => handleNavClick(e as any, '/')} className="w-24 h-24 rounded-[2rem] overflow-hidden border-2 border-slate-100 shadow-lg block hover:scale-105 transition-transform text-center">
-              <img 
+              <img
                 src={monikLogo}
-                alt="Logo" 
-                className="w-full h-full object-cover" 
+                alt="Logo"
+                className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
