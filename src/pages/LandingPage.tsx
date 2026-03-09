@@ -193,7 +193,7 @@ export default function LandingPage() {
               ROOM PUZZLE:<br />SLIDE ESCAPE
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-md font-medium">
-              Drops you into a mysterious grid world where every move counts. Find the key, smash obstacles, and use your tools — hammer, ice, and more. But watch out for the fire. With 2,000+ handcrafted levels, the only question is <br /><i>How far can you go?</i>
+              Drops you into a mysterious grid world where every move counts. Find the key, smash obstacles, and use your tools — hammer, ice, and more. But watch out for the fire. With 500+ handcrafted levels, the only question is <br /><i>How far can you go?</i>
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#" className="flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-xl hover:-translate-y-1 group">
