@@ -40,6 +40,7 @@ import contactUsImg from '../images/contact-us.png';
 import monikshotImg from '../images/monikshot-easy-full-screenshot.png';
 import shadowRunnerImg from '../images/shadow-runner-games.jpeg';
 import monikWorldPuzzleImg from '../images/monik-world-fill-words-puzzle.jpeg';
+import monikShortsBlockerImg from '../images/monik-shorts-blocker.jpg';
 
 export default function LandingPage() {
   const location = useLocation();
@@ -76,6 +77,13 @@ export default function LandingPage() {
       title: "MonikShot - Easy Screenshot",
       description: "Capture a full-screen screenshot and edit it quickly right in your browser.",
       image: monikshotImg,
+      category: "Chrome Extension",
+      links: { chrome: "#" }
+    },
+    {
+      title: "Monik Shorts Blocker",
+      description: "Block YouTube Shorts instantly. Reclaim your feed, stay focused, and take back control of your time — for free.",
+      image: monikShortsBlockerImg,
       category: "Chrome Extension",
       links: { chrome: "#" }
     }
@@ -338,8 +346,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Other Games */}
-      <section id="games" className="py-32 bg-slate-50 relative overflow-hidden">
+      {/* Our Portfolio */}
+      <section id="portfolio" className="py-32 bg-slate-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-dot-pattern opacity-[0.05]" />
 
         <div className="max-w-7xl mx-auto px-6 space-y-20 relative z-10">

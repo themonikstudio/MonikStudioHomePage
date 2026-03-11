@@ -41,8 +41,8 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
 
   return (
     <header className={`sticky top-0 z-50 backdrop-blur-xl border-b transition-all duration-500 ${isDark
-        ? 'bg-slate-900/80 border-white/10 text-white shadow-[0_0_30px_rgba(0,0,0,0.3)]'
-        : 'bg-white/70 border-slate-100 text-slate-900'
+      ? 'bg-slate-900/80 border-white/10 text-white shadow-[0_0_30px_rgba(0,0,0,0.3)]'
+      : 'bg-white/70 border-slate-100 text-slate-900'
       }`}>
       {/* Gaming Pattern Overlay for Dark Variant */}
       {isDark && (
@@ -81,7 +81,7 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
             }`}>Home</Link>
           <Link to="/#about" onClick={(e) => handleNavClick(e as any, '/#about')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
             }`}>About</Link>
-          <Link to="/#games" onClick={(e) => handleNavClick(e as any, '/#games')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
+          <Link to="/#portfolio" onClick={(e) => handleNavClick(e as any, '/#portfolio')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
             }`}>Portfolio</Link>
           <Link to="/#services" onClick={(e) => handleNavClick(e as any, '/#services')} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
             }`}>Services</Link>
@@ -104,8 +104,8 @@ export const Header = ({ variant = 'light' }: { variant?: 'light' | 'dark' }) =>
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className={`md:hidden absolute top-full left-0 w-full border-b backdrop-blur-xl shadow-lg transition-all ${isDark
-            ? 'bg-slate-900/95 border-white/10 text-white'
-            : 'bg-white/95 border-slate-100 text-slate-900'
+          ? 'bg-slate-900/95 border-white/10 text-white'
+          : 'bg-white/95 border-slate-100 text-slate-900'
           }`}>
           <div className="flex flex-col p-6 gap-6 font-bold text-lg uppercase tracking-wider">
             <Link to="/" onClick={(e) => { handleNavClick(e as any, '/'); setIsMobileMenuOpen(false); }} className={`transition-colors ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
