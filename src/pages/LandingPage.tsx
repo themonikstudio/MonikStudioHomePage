@@ -85,7 +85,7 @@ export default function LandingPage() {
       description: "Block YouTube Shorts instantly. Reclaim your feed, stay focused, and take back control of your time — for free.",
       image: monikShortsBlockerImg,
       category: "Chrome Extension",
-      links: { chrome: "#" }
+      links: { chrome: "https://chromewebstore.google.com/detail/oifnddgbopilelbhdncceokibmccgpja?utm_source=item-share-cb" }
     }
   ];
 
