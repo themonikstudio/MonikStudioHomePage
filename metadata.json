@@ -1,5 +1,6 @@
 {
-  "name": "Monik Studio | Mobile Game Development Studio",
-  "description": "Official landing page for Monik Studio, creators of immersive mobile gaming experiences including Neon Strike.",
-  "requestFramePermissions": []
+  "name": "Monik Studio",
+  "description": "Indie studio chuyên thiết kế 3D, in 3D và các dự án DIY công nghệ, lập trình & vi mạch hữu ích.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
