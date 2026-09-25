@@ -1,0 +1,6 @@
+{
+  "name": "Monik Studio",
+  "description": "Official website for Monik Studio – Independent studio creating mobile games, native apps, and Chrome extensions, featuring complete store policy compliance, developer support, and showcase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

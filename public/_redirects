@@ -1,0 +1,6 @@
+# Netlify and Cloudflare Pages direct routing for static pages
+/privacy-policy /privacy-policy/index.html 200
+/terms-of-service /terms-of-service/index.html 200
+/data-deletion /data-deletion/index.html 200
+/support /support/index.html 200
+/store-compliance /store-compliance/index.html 200

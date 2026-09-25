@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Monik Studio Cube Favicon -->
+  <!-- Top Diamond in Coral/Terracotta -->
+  <polygon points="50,14 82,31.5 50,49 18,31.5" fill="#D86950" />
+  <!-- Hollow interior cutout -->
+  <polygon points="50,22.5 72,34.5 50,45.5 28,34.5" fill="#FAF8F5" />
+
+  <!-- Left Column in Muted Sage Green -->
+  <polygon points="18,34 50,51 50,88 18,71" fill="#779585" />
+
+  <!-- Right Column in Warm Ochre / Sand -->
+  <polygon points="50,51 82,34 82,71 50,88" fill="#CDB07B" />
+
+  <!-- Central stylized 3D 'M' in Dark Graphite -->
+  <polygon points="28,44 38,49.5 38,78 28,73" fill="#24282C" />
+  <polygon points="72,44 62,49.5 62,78 72,73" fill="#24282C" />
+  <polygon points="38,49.5 50,57 62,49.5 62,59 50,66.5 38,59" fill="#24282C" />
+  <polygon points="50,73.5 60,79 50,84.5 40,79" fill="#24282C" />
+</svg>

@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/privacy-policy", "destination": "/privacy-policy/index.html" },
+    { "source": "/terms-of-service", "destination": "/terms-of-service/index.html" },
+    { "source": "/data-deletion", "destination": "/data-deletion/index.html" },
+    { "source": "/support", "destination": "/support/index.html" },
+    { "source": "/store-compliance", "destination": "/store-compliance/index.html" }
+  ]
+}
