@@ -14,6 +14,7 @@ export interface AppItem {
   category: 'game' | 'app' | 'extension';
   platforms: Platform[];
   image: string;
+  icon?: string;
   accentColor: string;
   status: 'live' | 'new_release' | 'beta';
   version: string;

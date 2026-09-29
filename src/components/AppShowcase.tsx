@@ -170,13 +170,22 @@ export const AppShowcase: React.FC<AppShowcaseProps> = ({ onNavigateToPolicy }) 
                 </div>
 
                 {/* Bottom title overlay on cover */}
-                <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <div className="text-[11px] font-mono text-white/80">
-                    v{app.version} • {app.sizeMb || 'Under 100MB'} • {app.ageRating}
+                <div className="absolute bottom-3 left-4 right-4 flex items-center gap-3 text-white">
+                  {app.icon && (
+                    <img
+                      src={app.icon}
+                      alt={`${app.title} icon`}
+                      className="w-11 h-11 rounded-xl shadow-md border border-white/20 object-cover shrink-0"
+                    />
+                  )}
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-mono text-white/80">
+                      v{app.version} • {app.sizeMb || 'Under 100MB'} • {app.ageRating}
+                    </div>
+                    <h3 className="text-lg font-bold font-['Outfit'] drop-shadow-xs leading-snug mt-0.5 truncate">
+                      {app.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-bold font-['Outfit'] drop-shadow-xs leading-snug mt-0.5">
-                    {app.title}
-                  </h3>
                 </div>
               </div>
 
@@ -292,24 +301,33 @@ export const AppShowcase: React.FC<AppShowcaseProps> = ({ onNavigateToPolicy }) 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#24282C]/80 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-6 right-6 text-white">
-                <span
-                  className="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider text-white"
-                  style={{ backgroundColor: selectedApp.accentColor }}
-                >
-                  {selectedApp.category === 'game'
-                    ? 'Mobile Game'
-                    : selectedApp.category === 'extension'
-                    ? 'Chrome Extension'
-                    : 'Mobile App'}
-                </span>
-                <h3 className="text-2xl font-extrabold font-['Outfit'] mt-1">
-                  {selectedApp.title}
-                </h3>
-                <p className="text-xs text-white/80 font-mono mt-0.5">
-                  Version {selectedApp.version} • {selectedApp.category === 'extension' ? `${selectedApp.manifestVersion || 'Manifest V3'} • ${selectedApp.usersCount || 'Community'}` : `Size: ${selectedApp.sizeMb || 'Standard'} • Age Rating: ${selectedApp.ageRating}`}
-                </p>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#24282C]/90 via-[#24282C]/30 to-transparent" />
+              <div className="absolute bottom-4 left-6 right-6 text-white flex items-end gap-3.5">
+                {selectedApp.icon && (
+                  <img
+                    src={selectedApp.icon}
+                    alt={`${selectedApp.title} icon`}
+                    className="w-14 h-14 rounded-2xl shadow-lg border-2 border-white/20 object-cover shrink-0"
+                  />
+                )}
+                <div className="min-w-0">
+                  <span
+                    className="px-2.5 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider text-white"
+                    style={{ backgroundColor: selectedApp.accentColor }}
+                  >
+                    {selectedApp.category === 'game'
+                      ? 'Mobile Game'
+                      : selectedApp.category === 'extension'
+                      ? 'Chrome Extension'
+                      : 'Mobile App'}
+                  </span>
+                  <h3 className="text-2xl font-extrabold font-['Outfit'] mt-1 truncate">
+                    {selectedApp.title}
+                  </h3>
+                  <p className="text-xs text-white/80 font-mono mt-0.5">
+                    Version {selectedApp.version} • {selectedApp.category === 'extension' ? `${selectedApp.manifestVersion || 'Manifest V3'} • ${selectedApp.usersCount || 'Community'}` : `Size: ${selectedApp.sizeMb || 'Standard'} • Age Rating: ${selectedApp.ageRating}`}
+                  </p>
+                </div>
               </div>
             </div>
 
