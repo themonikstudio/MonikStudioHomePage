@@ -305,7 +305,7 @@ export const FAQ_DATA: FAQItem[] = [
   {
     category: 'games',
     question: 'Can I play Monik Studio games offline without internet?',
-    answer: 'Yes! Titles like HexaBound and Lumina Solitaire are designed to be 100% playable offline without cellular or Wi-Fi connection, making them ideal for airplane mode and daily commutes.'
+    answer: 'Yes! Titles like Lịch Xưa and Knife Shooter Hit Top are designed to be 100% functional and playable offline without cellular or Wi-Fi connection, making them ideal for airplane mode and daily commutes.'
   },
   {
     category: 'data',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { MonikLogo } from './MonikLogo';
-import { ShieldCheck, ArrowUp } from 'lucide-react';
+import { ShieldCheck, ArrowUp, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   onNavigateToPolicy: (path: string) => void;
@@ -39,55 +39,89 @@ export const Footer: React.FC<FooterProps> = ({
             <span className="text-xs font-bold uppercase tracking-wider text-[#779585] block">
               Releases & Extensions
             </span>
-            <div className="grid grid-cols-2 gap-2 text-xs text-[#A0A8B0]">
-              <ul className="space-y-1.5">
-                <li className="text-[#CDB07B] font-semibold text-[11px] uppercase tracking-wider">Mobile</li>
+            <div className="grid grid-cols-2 gap-3 text-xs text-[#A0A8B0]">
+              <ul className="space-y-2">
+                <li className="text-[#CDB07B] font-semibold text-[11px] uppercase tracking-wider">
+                  iOS Apps
+                </li>
                 <li>
-                  <a href="/#showcase" onClick={handleProductClick} className="hover:text-white transition-colors">
-                    HexaBound Puzzle
+                  <a
+                    href="https://apps.apple.com/us/app/l%E1%BB%8Bch-x%C6%B0a-l%E1%BB%8Bch-%C3%A2m-v%E1%BA%A1n-ni%C3%AAn/id6816468574"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>Lịch Xưa</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
                   </a>
                 </li>
                 <li>
-                  <a href="/#showcase" onClick={handleProductClick} className="hover:text-white transition-colors">
-                    Chrono Drift Runner
+                  <a
+                    href="https://apps.apple.com/us/app/lynote-draw-music/id6814047781"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>Lynote</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
                   </a>
                 </li>
                 <li>
-                  <a href="/#showcase" onClick={handleProductClick} className="hover:text-white transition-colors">
-                    Aura Daily Habits
+                  <a
+                    href="https://apps.apple.com/us/app/docushelf/id6813003627"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>DocuShelf</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
                   </a>
                 </li>
                 <li>
-                  <a href="/#showcase" onClick={handleProductClick} className="hover:text-white transition-colors">
-                    Lumina Solitaire
+                  <a
+                    href="https://apps.apple.com/us/app/knife-shooter-hit-top/id1525110538"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>Knife Shooter</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
                   </a>
                 </li>
               </ul>
-              <ul className="space-y-1.5">
-                <li className="text-[#D86950] font-semibold text-[11px] uppercase tracking-wider">Extensions</li>
+              <ul className="space-y-2">
+                <li className="text-[#D86950] font-semibold text-[11px] uppercase tracking-wider">
+                  Chrome Extensions
+                </li>
                 <li>
                   <a
-                    href="https://chromewebstore.google.com/detail/monik-shorts-block/oifnddgbopilelbhdncceokibmccgpja?hl=en-US&utm_source=ext_sidebar"
+                    href="https://chromewebstore.google.com/detail/monikshot-easy-screenshot/mplmcjkilfpnhccddaekpmheeecdnpcb"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
                   >
-                    Monik Shorts Block
+                    <span>MonikShot</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#D86950] transition-colors" />
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://chromewebstore.google.com/detail/monikshot-easy-screenshot/mplmcjkilfpnhccddaekpmheeecdnpcb?hl=en-US&utm_source=ext_sidebar"
+                    href="https://chromewebstore.google.com/detail/monik-shorts-block/oifnddgbopilelbhdncceokibmccgpja"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
                   >
-                    MonikShot Screenshot
+                    <span>Shorts Block</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#D86950] transition-colors" />
                   </a>
                 </li>
-                <li>
-                  <a href="/#showcase" onClick={handleProductClick} className="hover:text-white transition-colors">
-                    All Products →
+                <li className="pt-1">
+                  <a
+                    href="/#showcase"
+                    onClick={handleProductClick}
+                    className="text-[#779585] hover:text-white font-medium transition-colors inline-flex items-center gap-1"
+                  >
+                    <span>All Products →</span>
                   </a>
                 </li>
               </ul>
