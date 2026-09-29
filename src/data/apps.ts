@@ -1,4 +1,5 @@
 import { AppItem } from '../types';
+import lichxuaBanner from '../assets/images/lichxua_banner_1790656775243.jpg';
 import lynoteBanner from '../assets/images/lynote_banner_1790356300330.jpg';
 import docushelfBanner from '../assets/images/docushelf_banner_1790356420935.jpg';
 import hexaboundCover from '../assets/images/hexabound_cover_1789580526654.jpg';
@@ -12,6 +13,29 @@ import monikShortsCover from '../assets/images/monik_shorts_cover_1789616986225.
 import monikshotCover from '../assets/images/monikshot_cover_1789616999459.jpg';
 
 export const APPS_DATA: AppItem[] = [
+  {
+    id: 'lich-xua',
+    title: 'Lịch Xưa - Lịch Âm Vạn Niên',
+    tagline: 'Lịch bloc xé tường truyền thống tái hiện trên iPhone — hoài niệm, chính xác, nhẹ nhàng.',
+    description: 'Lịch Xưa tái hiện nét đẹp bình dị của cuốn lịch bloc treo tường quen thuộc. Mỗi ngày một bức tranh dân gian Đông Hồ chuyển động sinh động, tra cứu âm dương chuẩn xác theo thuật toán Hồ Ngọc Đức, văn khấn cổ truyền, hướng xuất hành, giờ hoàng đạo và nhắc nhở ngày giỗ, ngày sóc vọng. Hoạt động 100% offline, không thu thập dữ liệu cá nhân.',
+    category: 'app',
+    platforms: ['ios'],
+    image: lichxuaBanner,
+    accentColor: '#D86950',
+    status: 'new_release',
+    version: '1.0',
+    ageRating: '4+ (Everyone)',
+    sizeMb: '14.6 MB',
+    appStoreUrl: 'https://apps.apple.com/us/app/l%E1%BB%8Bch-x%C6%B0a-l%E1%BB%8Bch-%C3%A2m-v%E1%BA%A1n-ni%C3%AAn/id6816468574',
+    tags: ['Lịch Vạn Niên', 'Âm Lịch', 'Tranh Đông Hồ', 'Văn Khấn', 'Tiện ích', 'iOS Widgets'],
+    features: [
+      'Tranh dân gian Đông Hồ chuyển động mộc mạc theo từng ngày trong năm',
+      'Thuật toán âm lịch chuẩn xác cho múi giờ Việt Nam từ năm 1900 đến 2199',
+      'Âm thanh xé lịch bloc chân thực, giao diện hoài niệm giấy ố và dấu mộc chu sa',
+      'Đầy đủ văn khấn, giờ hoàng đạo, hướng xuất hành, tuổi xung khắc và tiết khí',
+      'Hỗ trợ Widget màn hình chính, StandBy và Apple Watch, 100% offline không cần đăng nhập'
+    ]
+  },
   {
     id: 'lynote-draw-music',
     title: 'Lynote: Draw Music',
@@ -270,6 +294,6 @@ export const APPS_DATA: AppItem[] = [
 export const STUDIO_METRICS = [
   { value: '1.2M+', label: 'Global Mobile Downloads' },
   { value: '4.9 ★', label: 'Average User Rating' },
-  { value: '11', label: 'Published Games, Apps & Extensions' },
+  { value: '12', label: 'Published Games, Apps & Extensions' },
   { value: '100%', label: 'Privacy & Store Compliant' }
 ];
