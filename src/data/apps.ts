@@ -19,9 +19,9 @@ import monikshortsPromo from '../assets/images/monikshorts_real_promo.jpg';
 export const APPS_DATA: AppItem[] = [
   {
     id: 'lich-xua',
-    title: 'Lịch Xưa - Lịch Âm Vạn Niên',
-    tagline: 'Lịch bloc xé tường truyền thống tái hiện trên iPhone — hoài niệm, chính xác, nhẹ nhàng.',
-    description: 'Lịch Xưa tái hiện nét đẹp bình dị của cuốn lịch bloc treo tường quen thuộc. Mỗi ngày một bức tranh dân gian Đông Hồ chuyển động sinh động, tra cứu âm dương chuẩn xác theo thuật toán Hồ Ngọc Đức, văn khấn cổ truyền, hướng xuất hành, giờ hoàng đạo và nhắc nhở ngày giỗ, ngày sóc vọng. Hoạt động 100% offline, không thu thập dữ liệu cá nhân.',
+    title: 'Lịch Xưa: Lunar Calendar',
+    tagline: "Grandma's tear-off wall calendar, reborn on your iPhone — beautiful, accurate, lightweight.",
+    description: "Grandma's tear-off wall calendar, reborn on your iPhone. Lịch Xưa (\"the old calendar\") brings the authentic look of a classic Vietnamese wall calendar: aged paper, cinnabar ink, and a hand-stamped seal. Every morning, swipe up to tear off a page — it curls under your finger with a real paper-tearing sound. Features animated Đông Hồ folk paintings, lunar reminders (giỗ), 20 traditional prayers (văn khấn), Home & Lock Screen widgets, StandBy, and Apple Watch complications. 100% offline with zero sign-in.",
     category: 'app',
     platforms: ['ios'],
     image: lichxuaScreenshot,
@@ -31,14 +31,14 @@ export const APPS_DATA: AppItem[] = [
     version: '1.0',
     ageRating: '4+ (Everyone)',
     sizeMb: '14.6 MB',
-    appStoreUrl: 'https://apps.apple.com/vn/app/l%E1%BB%8Bch-x%C6%B0a-l%E1%BB%8Bch-%C3%A2m-v%E1%BA%A1n-ni%C3%AAn/id6816468574',
-    tags: ['Lịch Vạn Niên', 'Âm Lịch', 'Tranh Đông Hồ', 'Văn Khấn', 'Tiện ích', 'iOS Widgets'],
+    appStoreUrl: 'https://apps.apple.com/us/app/l%E1%BB%8Bch-x%C6%B0a-l%E1%BB%8Bch-%C3%A2m-v%E1%BA%A1n-ni%C3%AAn/id6816468574',
+    tags: ['Lunar Calendar', 'Vietnamese Heritage', 'Đông Hồ Art', 'Widgets', 'Apple Watch', 'Offline First'],
     features: [
-      'Tranh dân gian Đông Hồ chuyển động mộc mạc theo từng ngày trong năm',
-      'Thuật toán âm lịch chuẩn xác cho múi giờ Việt Nam từ năm 1900 đến 2199',
-      'Âm thanh xé lịch bloc chân thực, giao diện hoài niệm giấy ố và dấu mộc chu sa',
-      'Đầy đủ văn khấn, giờ hoàng đạo, hướng xuất hành, tuổi xung khắc và tiết khí',
-      'Hỗ trợ Widget màn hình chính, StandBy và Apple Watch, 100% offline không cần đăng nhập'
+      'Authentic Vietnamese retro: aged paper, cinnabar ink, vintage typography, and real paper-tearing curl sound',
+      'Animated Đông Hồ folk paintings every day (rooster pecking grain, waddling pig family, carp, and Mouse Wedding)',
+      'Accurate to Vietnam Time (GMT+7) with Hồ Ngọc Đức algorithm from 1900 to 2199 — 100% offline',
+      'Lunar reminders for memorial days (giỗ), lunar birthdays, 1st & 15th, and Tết countdown',
+      '20 traditional Vietnamese prayers (văn khấn), Home/Lock Screen widgets, StandBy, and Apple Watch complications'
     ]
   },
   {
