@@ -4,6 +4,9 @@ import { AppItem } from '../types';
 import lichxuaScreenshot from '../assets/images/lichxua_real_hero.png';
 import lichxuaIcon from '../assets/images/lichxua_icon.jpg';
 
+import dingScreenshot from '../assets/images/ding_real_hero.png';
+import dingIcon from '../assets/images/ding_icon.jpg';
+
 import lynoteScreenshot from '../assets/images/lynote_real_hero.png';
 import lynoteIcon from '../assets/images/lynote_cover.jpg';
 
@@ -39,6 +42,31 @@ export const APPS_DATA: AppItem[] = [
       'Accurate to Vietnam Time (GMT+7) with Hồ Ngọc Đức algorithm from 1900 to 2199 — 100% offline',
       'Lunar reminders for memorial days (giỗ), lunar birthdays, 1st & 15th, and Tết countdown',
       '20 traditional Vietnamese prayers (văn khấn), Home/Lock Screen widgets, StandBy, and Apple Watch complications'
+    ]
+  },
+  {
+    id: 'ding-kitchen-timer',
+    title: 'Ding! – Kitchen Timer',
+    tagline: 'The smart kitchen timer that knows what you are cooking — step-by-step guidance for eggs, steak, and more.',
+    description: 'Stop guessing cooking times. Ding! is the kitchen timer that knows what you are cooking. Choose a dish, set how you like it — soft or hard eggs, rare or medium steak, extra-crispy fries — and Ding! calculates the time for you. Every step is guided: flip, shake, rest, serve. Run multiple timers at once with live countdowns, Lock Screen and Dynamic Island support, big easy-to-hit buttons for messy hands, and 100% on-device privacy with zero accounts or ads.',
+    category: 'app',
+    platforms: ['ios', 'android'],
+    image: dingScreenshot,
+    icon: dingIcon,
+    accentColor: '#E06D53',
+    status: 'new_release',
+    version: '1.0',
+    ageRating: '4+ (Everyone)',
+    sizeMb: '4.6 MB',
+    appStoreUrl: 'https://apps.apple.com/us/app/ding-kitchen-timer/id6815182459',
+    playStoreUrl: 'https://play.google.com/store/apps/details?id=com.monikstudio.ding&pcampaignid=web_share',
+    tags: ['Kitchen Timer', 'Cooking Assistant', 'Smart Presets', 'Food & Drink', 'Multi-timer', 'Zero Tracking'],
+    features: [
+      'Smart presets for 30 dishes (eggs, steak, chicken, salmon, pasta, rice, air fryer favorites, baking, tea and coffee)',
+      'Step-by-step timers with actionable reminders ("Flip the steak!", "Shake the basket!", "Rest")',
+      'Run several timers simultaneously side-by-side with clear at-a-glance status',
+      'Never miss the ding: rings through Silent mode & Focus with critical alarms, plus Live Activities & Dynamic Island',
+      '100% private: no accounts, no ads, no telemetry — timers stay entirely on your device'
     ]
   },
   {
@@ -162,6 +190,6 @@ export const APPS_DATA: AppItem[] = [
 export const STUDIO_METRICS = [
   { value: '1.2M+', label: 'Global Mobile Downloads' },
   { value: '4.9 ★', label: 'Average User Rating' },
-  { value: '6', label: 'Published Games, Apps & Extensions' },
+  { value: '7', label: 'Published Games, Apps & Extensions' },
   { value: '100%', label: 'Privacy & Store Compliant' }
 ];
