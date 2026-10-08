@@ -101,6 +101,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
           </p>
           <div className="mt-3 p-4 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] font-mono text-sm space-y-1">
             <div><strong className="text-[#24282C]">Monik Studio Privacy Team</strong></div>
+            <div>Address: 136 Ho Tung Mau Street, Phu Dien Ward, Hanoi City, Vietnam</div>
             <div>Email: <a href="mailto:contact@monikstudio.com" className="text-[#D86950] underline">contact@monikstudio.com</a></div>
             <div>Website: <a href="https://monikstudio.com" target="_blank" rel="noreferrer" className="text-[#779585] underline">https://monikstudio.com</a></div>
           </div>

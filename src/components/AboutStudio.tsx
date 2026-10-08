@@ -1,6 +1,6 @@
 import React from 'react';
 import { MonikCubeIcon } from './MonikLogo';
-import { Heart, ShieldCheck, Sparkles, Smartphone, Award, Terminal } from 'lucide-react';
+import { Heart, ShieldCheck, Sparkles, Smartphone, Award, Terminal, MapPin } from 'lucide-react';
 
 export const AboutStudio: React.FC = () => {
   const pillars = [
@@ -58,6 +58,24 @@ export const AboutStudio: React.FC = () => {
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#24282C]">
                 Policy Certified
               </span>
+            </div>
+
+            {/* Studio Headquarters Address */}
+            <div className="mt-6 p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE4DA] max-w-md w-full text-left flex items-start gap-3.5 shadow-2xs">
+              <div className="p-2.5 bg-white rounded-xl text-[#D86950] border border-[#E2DDD5] shadow-2xs shrink-0 mt-0.5">
+                <MapPin size={18} />
+              </div>
+              <div className="space-y-0.5">
+                <span className="text-[11px] font-bold text-[#779585] uppercase tracking-wider block">
+                  Studio Location
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-[#24282C]">
+                  136 Ho Tung Mau Street, Phu Dien Ward
+                </p>
+                <p className="text-xs text-[#5A626A]">
+                  Hanoi City, Vietnam
+                </p>
+              </div>
             </div>
           </div>
 

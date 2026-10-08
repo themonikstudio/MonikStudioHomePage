@@ -1,6 +1,6 @@
 import React from 'react';
 import { MonikLogo } from './MonikLogo';
-import { ShieldCheck, ArrowUp, ExternalLink } from 'lucide-react';
+import { ShieldCheck, ArrowUp, ExternalLink, MapPin } from 'lucide-react';
 
 interface FooterProps {
   onNavigateToPolicy: (path: string) => void;
@@ -32,6 +32,10 @@ export const Footer: React.FC<FooterProps> = ({
             <p className="text-xs sm:text-sm text-[#A0A8B0] leading-relaxed max-w-sm">
               Monik Studio is an independent digital studio dedicated to crafting delightful, mindful mobile games, native apps, and lightweight Chrome extensions.
             </p>
+            <div className="text-xs text-[#A0A8B0] flex items-start gap-2 pt-1 max-w-sm">
+              <MapPin size={15} className="text-[#D86950] shrink-0 mt-0.5" />
+              <span>136 Ho Tung Mau Street, Phu Dien Ward, Hanoi City, Vietnam</span>
+            </div>
           </div>
 
           {/* Quick Navigation Links */}
