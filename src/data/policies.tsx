@@ -62,7 +62,83 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">4. Children&apos;s Privacy (COPPA & Google Play Families Policy)</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">4. Advertising, Tracking and Consent</h4>
+          <p>
+            Some of our apps are free and supported by ads. Apps without ads do not include any advertising SDK, and this section does not apply to them.
+          </p>
+          
+          <div className="mt-3 space-y-3">
+            <div>
+              <strong className="text-[#24282C]">Ad networks.</strong> Our ad-supported apps show ads from Google AdMob and, in some apps, Unity Ads. Ads may be rewarded ads that you choose to watch, banners, or full-screen ads shown at natural breaks (for example between levels), never in a way that interrupts active play. We do not run our own ad servers and we do not receive the data described below; it is collected directly by the ad network.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Data collected by ad networks.</strong> To deliver, measure and protect ads, an ad network&apos;s SDK may collect:
+              <ul className="list-disc pl-5 space-y-1.5 mt-2">
+                <li>your IP address, used to estimate your approximate (not precise) location;</li>
+                <li>device identifiers, such as the advertising identifier (IDFA on iOS, Advertising ID on Android) where permitted, or app-scoped identifiers;</li>
+                <li>information about the ads you see and interact with, and how you interact with the app (for example app launches and taps on ads);</li>
+                <li>diagnostic data such as crash logs and performance data.</li>
+              </ul>
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Personalized and non-personalized ads.</strong> Ads may be contextual (based on the app you are using) or, where you have given permission, personalized (based on your interests).
+              <ul className="list-disc pl-5 space-y-1.5 mt-2">
+                <li>
+                  <strong className="text-[#24282C]">iOS:</strong> before any tracking, the app asks for your permission through Apple&apos;s App Tracking Transparency prompt. Only if you allow tracking may the ad network use your device&apos;s IDFA to show more relevant ads. If you decline, you still see ads, but they are not personalized with the IDFA, and the app works exactly the same. You can change this anytime in iOS Settings → Privacy &amp; Security → Tracking.
+                </li>
+                <li>
+                  <strong className="text-[#24282C]">Android:</strong> you can reset or delete your Advertising ID, or opt out of personalized ads, in Android Settings → Google → Ads (or Settings → Privacy → Ads, depending on your device).
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Consent in the EEA, UK and Switzerland.</strong> Where the law requires it, our apps show a consent form (Google&apos;s User Messaging Platform) before any ads are requested, letting you accept or refuse personalized ads and the related data use. You can review or change your choice anytime from the app&apos;s settings (for example &quot;Privacy choices&quot;).
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Children.</strong> Apps directed at children, or used in Google Play&apos;s Families program, show only non-personalized ads from certified ad networks and never ask for tracking permission.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Removing ads.</strong> Where offered, an optional &quot;Remove Ads&quot; purchase turns off interstitial and banner ads. Rewarded ads remain available only if you choose to watch them.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Ad partner policies.</strong> Each ad network handles data under its own policy:
+              <ul className="list-disc pl-5 space-y-1.5 mt-2">
+                <li>
+                  Google:{' '}
+                  <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-[#D86950] underline">
+                    https://policies.google.com/technologies/partner-sites
+                  </a>{' '}
+                  and{' '}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#D86950] underline">
+                    https://policies.google.com/privacy
+                  </a>
+                </li>
+                <li>
+                  Unity Ads:{' '}
+                  <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#D86950] underline">
+                    https://unity.com/legal/game-player-and-app-user-privacy-policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-4 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB]">
+              <strong className="text-[#24282C] block mb-1">We do not sell your personal information.</strong>
+              <p>
+                Monik Studio does not sell personal information. In ad-supported apps, our ad partners collect the data described above to provide ads. Under some laws (for example California&apos;s CPRA), letting partners use device identifiers for personalized ads may count as &quot;sharing&quot; for cross-context behavioral advertising. You can opt out at any time by declining tracking on iOS, opting out of ads personalization on Android, or changing your choice in the app&apos;s privacy settings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">5. Children&apos;s Privacy (COPPA & Google Play Families Policy)</h4>
           <p>
             We treat young players&apos; safety with utmost care. Titles labeled as &quot;Everyone&quot; (4+) comply with the Children&apos;s Online Privacy Protection Act (COPPA), the EU GDPR-K, and the Google Play Families Policy. We do not knowingly collect personal information from children under 13 (or under 16 in certain EU jurisdictions).
           </p>
@@ -72,7 +148,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">5. User Rights & Data Deletion (GDPR & CCPA/CPRA)</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">6. User Rights & Data Deletion (GDPR & CCPA/CPRA)</h4>
           <p>Under applicable global privacy laws, you possess the right to:</p>
           <ul className="list-disc pl-5 space-y-1 mt-2">
             <li>Request confirmation of whether we hold personal telemetry concerning you.</li>
@@ -95,7 +171,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">6. Contact Information</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">7. Contact Information</h4>
           <p>
             If you have any questions, feedback, or inquiries regarding our privacy standards, please contact our designated privacy officer at:
           </p>
