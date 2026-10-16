@@ -1,7 +1,7 @@
 import React from 'react';
-import { STUDIO_METRICS } from '../data/apps';
 import { MonikCubeIcon } from './MonikLogo';
 import { Smartphone, ArrowRight, Sparkles, ShieldCheck, Chrome } from 'lucide-react';
+import { useI18n } from '../i18n/LanguageContext';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -9,6 +9,15 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) => {
+  const { t } = useI18n();
+
+  const metrics = [
+    { value: '1.2M+', label: t.hero.metricDownloads },
+    { value: '4.9 ★', label: t.hero.metricRating },
+    { value: '7', label: t.hero.metricProducts },
+    { value: '100%', label: t.hero.metricPrivacy },
+  ];
+
   return (
     <section id="hero" className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       {/* Gentle ambient background glows matching logo palette */}
@@ -24,7 +33,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
             </span>
             <span className="text-xs text-[#9CA3AF]">•</span>
             <span className="text-xs font-medium text-[#779585]">
-              Games, Apps & Chrome Extensions
+              {t.hero.badge}
             </span>
           </div>
 
@@ -37,14 +46,14 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#24282C] tracking-tight font-['Outfit'] leading-[1.15]">
-            Crafting Thoughtful <br className="hidden sm:inline" />
-            <span className="text-[#D86950]">Mobile Games</span>, <span className="text-[#779585]">Apps</span> & <span className="text-[#CDB07B]">Extensions</span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#24282C] tracking-tight leading-[1.15]">
+            {t.hero.headlinePart1} <br className="hidden sm:inline" />
+            <span className="text-[#D86950]">{t.hero.headlinePart2}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="mt-5 text-base sm:text-lg text-[#5A626A] max-w-2xl leading-relaxed font-normal">
-            Monik Studio designs peaceful puzzle titles, responsive arcade runners, distraction-free mobile tools, and lightweight Chrome browser extensions. Built with meticulous craftsmanship, zero telemetry, and certified store compliance.
+            {t.hero.subheadline}
           </p>
 
           {/* Action CTAs */}
@@ -55,7 +64,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
               className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold rounded-xl bg-[#24282C] text-white hover:bg-[#343B41] transition-all shadow-xs flex items-center justify-center gap-2 group active:scale-98"
             >
               <Sparkles size={16} className="text-[#CDB07B]" />
-              <span>Explore Products & Releases</span>
+              <span>{t.hero.exploreBtn}</span>
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </button>
 
@@ -64,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
               onClick={() => onNavigate('about')}
               className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold rounded-xl bg-white text-[#24282C] hover:bg-[#F7F4EE] border border-[#E0D9CE] transition-all shadow-2xs flex items-center justify-center gap-2 active:scale-98"
             >
-              <span>About the Studio</span>
+              <span>{t.hero.aboutBtn}</span>
             </button>
           </div>
 
@@ -101,12 +110,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
 
           {/* Studio Metrics Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-10 w-full">
-            {STUDIO_METRICS.map((metric, idx) => (
+            {metrics.map((metric, idx) => (
               <div
                 key={idx}
                 className="p-4 bg-white/80 rounded-2xl border border-[#EAE4DA] shadow-2xs text-center"
               >
-                <div className="text-xl sm:text-2xl font-extrabold text-[#24282C] font-['Outfit']">
+                <div className="text-xl sm:text-2xl font-extrabold text-[#24282C]">
                   {metric.value}
                 </div>
                 <div className="text-xs text-[#6B7280] mt-1 font-medium">

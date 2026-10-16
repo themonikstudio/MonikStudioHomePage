@@ -1,6 +1,8 @@
 import React from 'react';
 import { MonikLogo } from './MonikLogo';
 import { ShieldCheck, ArrowUp, ExternalLink, MapPin } from 'lucide-react';
+import { useI18n } from '../i18n/LanguageContext';
+import { LanguageSelector } from './LanguageSelector';
 
 interface FooterProps {
   onNavigateToPolicy: (path: string) => void;
@@ -11,6 +13,7 @@ export const Footer: React.FC<FooterProps> = ({
   onNavigateToPolicy,
   onNavigateToHomeSection,
 }) => {
+  const { t } = useI18n();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -30,18 +33,18 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="md:col-span-4 space-y-4">
             <MonikLogo variant="horizontal" size="md" theme="dark" />
             <p className="text-xs sm:text-sm text-[#A0A8B0] leading-relaxed max-w-sm">
-              Monik Studio is an independent digital studio dedicated to crafting delightful, mindful mobile games, native apps, and lightweight Chrome extensions.
+              {t.footer.brandDesc}
             </p>
             <div className="text-xs text-[#A0A8B0] flex items-start gap-2 pt-1 max-w-sm">
               <MapPin size={15} className="text-[#D86950] shrink-0 mt-0.5" />
-              <span>136 Ho Tung Mau Street, Phu Dien Ward, Hanoi City, Vietnam</span>
+              <span>{t.footer.studioAddress}</span>
             </div>
           </div>
 
           {/* Quick Navigation Links */}
           <div className="md:col-span-4 space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#779585] block">
-              Releases & Extensions
+              {t.footer.releasesTitle}
             </span>
             <div className="grid grid-cols-2 gap-3 text-xs text-[#A0A8B0]">
               <ul className="space-y-2">
@@ -56,6 +59,7 @@ export const Footer: React.FC<FooterProps> = ({
                     className="hover:text-white transition-colors inline-flex items-center gap-1 group"
                   >
                     <span>Lịch Xưa</span>
+                    <span className="text-[9px] px-1 py-0.5 bg-[#E06D53]/20 text-[#E06D53] rounded font-mono font-medium">iOS/Play</span>
                     <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
                   </a>
                 </li>
@@ -148,10 +152,10 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="md:col-span-4 space-y-3">
             <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#D86950]">
               <ShieldCheck size={14} />
-              <span>Store Compliance & Legal Hub</span>
+              <span>{t.footer.complianceHubTitle}</span>
             </div>
             <p className="text-[11px] text-[#808892]">
-              Official public URLs for Apple App Store & Google Play Console review submission.
+              {t.footer.complianceDesc}
             </p>
             <ul className="space-y-2 text-xs text-[#A0A8B0]">
               <li>
@@ -159,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="/privacy-policy/"
                   className="hover:text-white transition-colors text-left block"
                 >
-                  Privacy Policy (Apple & Google Play)
+                  {t.footer.privacyPolicyLink}
                 </a>
               </li>
               <li>
@@ -167,7 +171,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="/terms-of-service/"
                   className="hover:text-white transition-colors text-left block"
                 >
-                  Terms of Service & EULA
+                  {t.footer.termsLink}
                 </a>
               </li>
               <li>
@@ -175,7 +179,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="/data-deletion/"
                   className="hover:text-white transition-colors text-left block text-[#D86950]"
                 >
-                  User Data Deletion Request Instructions
+                  {t.footer.dataDeletionLink}
                 </a>
               </li>
               <li>
@@ -183,7 +187,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="/support/"
                   className="hover:text-white transition-colors text-left block"
                 >
-                  Support URL & In-App Purchase Assistance
+                  {t.footer.supportLink}
                 </a>
               </li>
               <li>
@@ -191,7 +195,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="/store-compliance/"
                   className="hover:text-white transition-colors text-left block text-[#779585]"
                 >
-                  Developer Store Compliance URLs Hub
+                  {t.footer.complianceUrlsLink}
                 </a>
               </li>
             </ul>
@@ -201,14 +205,16 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Store Trademarks & Legal Notice */}
         <div className="py-6 border-b border-[#363C42]/60 text-[11px] text-[#717882] leading-relaxed">
           <p>
-            Apple, the Apple logo, iPhone, and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play, the Google Play logo, Google Chrome, and Chrome Web Store are trademarks of Google LLC.
+            {t.footer.trademarksNotice}
           </p>
         </div>
 
         {/* Bottom copyright row */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#808892] gap-4">
-          <div className="flex items-center gap-2">
-            <span>© 2026 Monik Studio. All rights reserved.</span>
+          <div className="flex items-center gap-3">
+            <span>{t.footer.rightsReserved}</span>
+            <span className="hidden sm:inline">•</span>
+            <LanguageSelector variant="footer" theme="dark" />
           </div>
 
           <div className="flex items-center gap-4">
@@ -218,10 +224,10 @@ export const Footer: React.FC<FooterProps> = ({
             <button
               onClick={scrollToTop}
               className="p-2 rounded-lg bg-[#2D3339] hover:bg-[#3D444C] text-[#CDB07B] transition-colors flex items-center gap-1"
-              title="Scroll to Top"
+              title={t.footer.scrollTop}
             >
               <ArrowUp size={14} />
-              <span className="text-[11px] font-semibold">Top</span>
+              <span className="text-[11px] font-semibold">{t.footer.scrollTop}</span>
             </button>
           </div>
         </div>

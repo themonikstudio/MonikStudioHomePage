@@ -1,10 +1,26 @@
 import React from 'react';
 
-export type Language = 'en';
+export type Language = 'en' | 'vi' | 'ja' | 'zh' | 'ko' | 'es' | 'pt';
 
 export type AppCategory = 'all' | 'game' | 'app' | 'extension';
 
 export type Platform = 'ios' | 'android' | 'chrome';
+
+export interface AppFeatureDetail {
+  title: string;
+  desc: string;
+  iconName?: string;
+}
+
+export interface AppLocalizedContent {
+  title?: string;
+  tagline?: string;
+  description?: string;
+  features?: string[];
+  tags?: string[];
+  highlights?: AppFeatureDetail[];
+  whatsNew?: string;
+}
 
 export interface AppItem {
   id: string;
@@ -27,6 +43,15 @@ export interface AppItem {
   manifestVersion?: string;
   tags: string[];
   features: string[];
+  localizations?: Partial<Record<Language, AppLocalizedContent>>;
+  // Rich Store additions from App Store, Google Play & Chrome Web Store
+  storeId?: string;
+  bundleId?: string;
+  requirements?: string;
+  pricing?: string;
+  compatibility?: string[];
+  whatsNew?: string;
+  highlights?: AppFeatureDetail[];
 }
 
 export type PolicySectionId = 

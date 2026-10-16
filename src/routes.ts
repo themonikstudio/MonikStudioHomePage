@@ -83,6 +83,51 @@ export const TAB_TO_PATH: Record<PolicyTabId, string> = {
   'store-urls': '/store-compliance',
 };
 
+import { AppItem } from './types';
+import { APPS_DATA } from './data/apps';
+
+/**
+ * Resolve any incoming pathname or alias to an App landing page route, or null
+ */
+export function resolveAppRoute(pathname: string): AppItem | null {
+  const cleanPath = pathname.toLowerCase().replace(/\/+$/, '') || '/';
+  
+  // Match /apps/:id or /app/:id
+  const match = cleanPath.match(/^\/(?:apps|app)\/([a-z0-9-]+)$/);
+  if (!match) return null;
+
+  const rawId = match[1];
+
+  // Try exact match or alias match
+  const found = APPS_DATA.find(a => a.id.toLowerCase() === rawId);
+  if (found) return found;
+
+  // Additional friendly alias mappings if needed
+  const aliasMap: Record<string, string> = {
+    'lichxua': 'lich-xua',
+    'ding': 'ding-kitchen-timer',
+    'kitchen-timer': 'ding-kitchen-timer',
+    'lynote': 'lynote-draw-music',
+    'draw-music': 'lynote-draw-music',
+    'docushelf-scanner': 'docushelf',
+    'knifeshooter': 'knife-shooter',
+    'monikshot': 'monikshot-screenshot',
+    'shortsblock': 'monik-shorts-block',
+    'shorts-block': 'monik-shorts-block',
+  };
+
+  const canonicalId = aliasMap[rawId];
+  if (canonicalId) {
+    return APPS_DATA.find(a => a.id === canonicalId) || null;
+  }
+
+  return null;
+}
+
+export function getAppPath(appId: string): string {
+  return `/apps/${appId}`;
+}
+
 /**
  * Resolve any incoming pathname or alias to a known Policy Route, or null if homepage
  */

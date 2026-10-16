@@ -4,3 +4,8 @@
 /data-deletion /data-deletion/index.html 200
 /support /support/index.html 200
 /store-compliance /store-compliance/index.html 200
+
+# App Landing Pages and general SPA fallback
+/apps/* /index.html 200
+/app/* /index.html 200
+/* /index.html 200

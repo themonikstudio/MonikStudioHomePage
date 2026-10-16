@@ -32,7 +32,7 @@ export const DataDeletionForm: React.FC = () => {
           <Trash2 size={22} />
         </div>
         <div>
-          <h3 className="text-lg sm:text-xl font-bold text-[#24282C] font-['Outfit']">
+          <h3 className="text-lg sm:text-xl font-bold text-[#24282C]">
             Submit an Online Data Deletion Request
           </h3>
           <p className="text-xs sm:text-sm text-[#5A626A] mt-1">

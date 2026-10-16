@@ -76,7 +76,7 @@ export const MonikLogo: React.FC<MonikLogoProps> = ({
         <div className="p-3 bg-white/80 rounded-2xl shadow-2xs border border-[#EBE5DB]">
           <MonikCubeIcon size={currentIconSize} />
         </div>
-        <div className="mt-2.5 flex items-baseline gap-1.5 font-['Outfit']">
+        <div className="mt-2.5 flex items-baseline gap-1.5">
           <span className={`font-extrabold tracking-tight ${textSizes[size]} ${finalMonikColor}`}>
             Monik
           </span>
@@ -92,7 +92,7 @@ export const MonikLogo: React.FC<MonikLogoProps> = ({
   return (
     <div className={`flex items-center gap-2.5 select-none ${className}`}>
       <MonikCubeIcon size={currentIconSize} />
-      <div className="flex items-baseline gap-1.5 font-['Outfit']">
+      <div className="flex items-baseline gap-1.5">
         <span className={`font-extrabold tracking-tight ${textSizes[size]} ${finalMonikColor}`}>
           Monik
         </span>

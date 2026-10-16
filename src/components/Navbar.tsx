@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { MonikLogo } from './MonikLogo';
 import { Menu, X, Sparkles, Layers, Info } from 'lucide-react';
+import { useI18n } from '../i18n/LanguageContext';
+import { LanguageSelector } from './LanguageSelector';
 
 interface NavbarProps {
   activeSection: string;
@@ -11,6 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeSection,
   onNavigate,
 }) => {
+  const { t } = useI18n();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -25,12 +28,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navItems = [
     {
       id: 'showcase',
-      label: 'Products & Releases',
+      label: t.nav.catalog,
       icon: Layers,
     },
     {
       id: 'about',
-      label: 'About Studio',
+      label: t.nav.about,
       icon: Info,
     },
   ];
@@ -82,20 +85,24 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </nav>
 
-          {/* Right Action: Explore Catalog */}
+          {/* Right Actions: Language Switcher & Explore Catalog */}
           <div className="hidden sm:flex items-center gap-3">
+            <LanguageSelector variant="navbar" />
+
             <button
               id="header-cta-btn"
               onClick={() => handleNavClick('showcase')}
               className="px-4 py-2 text-xs font-semibold rounded-xl bg-[#24282C] text-white hover:bg-[#383F46] transition-all shadow-xs flex items-center gap-1.5 active:scale-95"
             >
               <Sparkles size={14} className="text-[#CDB07B]" />
-              <span>Explore Mobile Catalog</span>
+              <span>{t.hero.exploreBtn}</span>
             </button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Right: Language & Hamburger */}
           <div className="flex sm:hidden items-center gap-2">
+            <LanguageSelector variant="compact" />
+
             <button
               id="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -110,7 +117,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#FAF8F5] border-b border-[#EBE5DB] px-4 pt-2 pb-5 space-y-1 shadow-lg">
+        <div className="md:hidden bg-[#FAF8F5] border-b border-[#EBE5DB] px-4 pt-2 pb-5 space-y-2 shadow-lg">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -129,7 +136,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNavClick('showcase')}
               className="w-full py-2.5 text-center text-xs font-semibold rounded-xl bg-[#24282C] text-white"
             >
-              Explore Mobile Catalog
+              {t.hero.exploreBtn}
             </button>
           </div>
         </div>

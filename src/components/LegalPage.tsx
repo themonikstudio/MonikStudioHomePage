@@ -186,7 +186,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({
                 <ShieldCheck size={14} />
                 <span>Official Store Compliance & Legal Hub</span>
               </div>
-              <h1 className="text-2xl sm:text-4xl font-extrabold text-[#24282C] font-['Outfit']">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-[#24282C]">
                 {routeMeta?.heading || 'Policies & Developer Documentation'}
               </h1>
               <p className="text-sm sm:text-base text-[#5A626A] mt-2 max-w-2xl leading-relaxed">
@@ -256,7 +256,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({
                     <span>•</span>
                     <span className="font-mono text-[#779585]">Monik Studio</span>
                   </div>
-                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#24282C] font-['Outfit']">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#24282C]">
                     {currentDoc.title}
                   </h2>
                 </div>
@@ -323,7 +323,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({
                       <HelpCircle size={14} />
                       <span>Official Customer Support Desk</span>
                     </div>
-                    <h2 className="text-xl sm:text-2xl font-extrabold text-[#24282C] font-['Outfit']">
+                    <h2 className="text-xl sm:text-2xl font-extrabold text-[#24282C]">
                       App Support & In-App Purchase Assistance
                     </h2>
                     <p className="text-xs sm:text-sm text-[#5A626A] mt-1">
@@ -391,7 +391,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({
                 {/* Contact Box */}
                 <div className="mt-8 p-6 rounded-2xl bg-[#24282C] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
-                    <h4 className="text-sm font-bold font-['Outfit']">
+                    <h4 className="text-sm font-bold">
                       Need Direct Developer Assistance?
                     </h4>
                     <p className="text-xs text-[#A0A8B0] mt-1">
@@ -419,7 +419,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({
                     <ShieldCheck size={14} />
                     <span>Store Submission Quick Reference</span>
                   </div>
-                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#24282C] font-['Outfit']">
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-[#24282C]">
                     App Store Connect & Google Play Console Submission URLs
                   </h2>
                   <p className="text-xs sm:text-sm text-[#5A626A] mt-1">

@@ -1,8 +1,11 @@
 import React from 'react';
 import { MonikCubeIcon } from './MonikLogo';
 import { Heart, ShieldCheck, Sparkles, Smartphone, Award, Terminal, MapPin } from 'lucide-react';
+import { useI18n } from '../i18n/LanguageContext';
 
 export const AboutStudio: React.FC = () => {
+  const { t } = useI18n();
+
   const pillars = [
     {
       icon: Heart,
@@ -33,30 +36,30 @@ export const AboutStudio: React.FC = () => {
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#779585]/15 text-[#5C826F] text-xs font-semibold uppercase tracking-wider mb-2">
               <Sparkles size={13} />
-              <span>About Monik Studio</span>
+              <span>{t.about.badge}</span>
             </div>
 
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#24282C] font-['Outfit'] leading-tight">
-              Passionate Developers, <br />
-              <span className="text-[#D86950]">Thoughtful Mobile Craft.</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#24282C] leading-tight">
+              {t.about.headlinePart1} <br />
+              <span className="text-[#D86950]">{t.about.headlinePart2}</span>
             </h2>
 
             <p className="text-sm sm:text-base text-[#5A626A] mt-4 leading-relaxed max-w-md">
-              Monik Studio was born from a simple belief: mobile software should enrich our lives, spark creativity, and offer calm respite from everyday digital clutter.
+              {t.about.intro}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2 max-w-md">
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#24282C]">
-                Mobile Games & Apps
+                {t.about.tagMobile}
               </span>
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#D86950]">
-                Chrome Extensions (V3)
+                {t.about.tagChrome}
               </span>
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#779585]">
-                iOS & Android Native
+                {t.about.tagNative}
               </span>
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#24282C]">
-                Policy Certified
+                {t.about.tagPolicy}
               </span>
             </div>
 
@@ -67,7 +70,7 @@ export const AboutStudio: React.FC = () => {
               </div>
               <div className="space-y-0.5">
                 <span className="text-[11px] font-bold text-[#779585] uppercase tracking-wider block">
-                  Studio Location
+                  {t.about.studioLocation}
                 </span>
                 <p className="text-xs sm:text-sm font-semibold text-[#24282C]">
                   136 Ho Tung Mau Street, Phu Dien Ward
@@ -92,7 +95,7 @@ export const AboutStudio: React.FC = () => {
                     <Icon size={20} />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-[#24282C] font-['Outfit']">
+                    <h3 className="text-base font-bold text-[#24282C]">
                       {pillar.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#5A626A] mt-1 leading-relaxed">

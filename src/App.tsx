@@ -1,20 +1,24 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
   resolvePolicyRoute, 
+  resolveAppRoute,
   updateDocumentMeta, 
   DEFAULT_HOME_META, 
-  TAB_TO_PATH, 
   PolicyTabId 
 } from './routes';
+import { LanguageProvider, useI18n } from './i18n/LanguageContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AppShowcase } from './components/AppShowcase';
 import { AboutStudio } from './components/AboutStudio';
 import { Footer } from './components/Footer';
 import { LegalPage } from './components/LegalPage';
+import { AppLandingPage } from './components/AppLandingPage';
 import { ShieldCheck, X } from 'lucide-react';
 
-export default function App() {
+function AppContent() {
+  const { t } = useI18n();
+
   const [currentPath, setCurrentPath] = useState<string>(() => {
     if (typeof window !== 'undefined') {
       // Check if user entered via a legacy hash link (e.g. /#privacy)
@@ -45,10 +49,17 @@ export default function App() {
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [showCookieBanner, setShowCookieBanner] = useState(true);
 
-  // Navigate handler for clean paths (e.g. /privacy-policy, /terms-of-service, /)
+  // Navigate handler for clean paths (e.g. /apps/lich-xua, /privacy-policy, /)
   const navigate = useCallback((path: string, scrollToSectionId?: string) => {
     window.history.pushState(null, '', path);
     setCurrentPath(path);
+
+    const appRoute = resolveAppRoute(path);
+    if (appRoute) {
+      updateDocumentMeta(`${appRoute.title} — Monik Studio`, appRoute.tagline);
+      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+      return;
+    }
 
     const policyRoute = resolvePolicyRoute(path);
     if (policyRoute) {
@@ -74,6 +85,13 @@ export default function App() {
     const handlePopState = () => {
       const path = window.location.pathname || '/';
       setCurrentPath(path);
+
+      const appRoute = resolveAppRoute(path);
+      if (appRoute) {
+        updateDocumentMeta(`${appRoute.title} — Monik Studio`, appRoute.tagline);
+        return;
+      }
+
       const policyRoute = resolvePolicyRoute(path);
       if (policyRoute) {
         updateDocumentMeta(policyRoute.title, policyRoute.description);
@@ -93,11 +111,16 @@ export default function App() {
     window.addEventListener('monik:navigate', handleCustomNavigate);
 
     // Initial meta tag synchronization
-    const initialRoute = resolvePolicyRoute(window.location.pathname);
-    if (initialRoute) {
-      updateDocumentMeta(initialRoute.title, initialRoute.description);
+    const initialApp = resolveAppRoute(window.location.pathname);
+    if (initialApp) {
+      updateDocumentMeta(`${initialApp.title} — Monik Studio`, initialApp.tagline);
     } else {
-      updateDocumentMeta(DEFAULT_HOME_META.title, DEFAULT_HOME_META.description);
+      const initialRoute = resolvePolicyRoute(window.location.pathname);
+      if (initialRoute) {
+        updateDocumentMeta(initialRoute.title, initialRoute.description);
+      } else {
+        updateDocumentMeta(DEFAULT_HOME_META.title, DEFAULT_HOME_META.description);
+      }
     }
 
     return () => {
@@ -119,10 +142,21 @@ export default function App() {
     }
   };
 
-  // Check if current path matches any policy route
-  const activePolicyRoute = resolvePolicyRoute(currentPath);
+  // 1. Check if current path matches an App landing page (/apps/:id)
+  const activeApp = resolveAppRoute(currentPath);
+  if (activeApp) {
+    return (
+      <AppLandingPage
+        app={activeApp}
+        onNavigateHome={() => navigate('/')}
+        onNavigateToApp={(appId) => navigate(`/apps/${appId}`)}
+        onNavigateToPolicy={(path) => navigate(path)}
+      />
+    );
+  }
 
-  // If on a dedicated legal / policy route (e.g. /privacy-policy, /terms-of-service, etc.)
+  // 2. Check if current path matches any policy route (/privacy-policy, etc.)
+  const activePolicyRoute = resolvePolicyRoute(currentPath);
   if (activePolicyRoute) {
     return (
       <LegalPage
@@ -133,10 +167,10 @@ export default function App() {
     );
   }
 
-  // Main Studio Landing Page (/)
+  // 3. Main Studio Landing Page (/)
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#24282C] relative font-sans">
-      {/* Navigation Bar */}
+      {/* Navigation Bar with Language Selector */}
       <Navbar
         activeSection={activeSection}
         onNavigate={handleHomeSectionNavigate}
@@ -148,11 +182,14 @@ export default function App() {
           onNavigate={handleHomeSectionNavigate} 
           onNavigateToPolicy={(path) => navigate(path)}
         />
-        <AppShowcase onNavigateToPolicy={(path) => navigate(path)} />
+        <AppShowcase 
+          onNavigateToPolicy={(path) => navigate(path)} 
+          onNavigateToApp={(appId) => navigate(`/apps/${appId}`)}
+        />
         <AboutStudio />
       </main>
 
-      {/* Footer with direct links to dedicated Policy pages with real URLs */}
+      {/* Footer with direct links and language switcher */}
       <Footer 
         onNavigateToPolicy={(path) => navigate(path)}
         onNavigateToHomeSection={handleHomeSectionNavigate}
@@ -167,23 +204,27 @@ export default function App() {
             </div>
             <div className="flex-1">
               <span className="font-bold text-[#24282C] block mb-0.5">
-                Privacy by Design
+                {t.cookieBanner.title}
               </span>
               <p className="text-[#5A626A] text-[11px] leading-relaxed">
-                Monik Studio strictly complies with Apple App Store and Google Play developer privacy regulations. We respect your data and do not collect or sell personal telemetry.
+                {t.cookieBanner.desc}
               </p>
               <div className="mt-2.5 flex items-center gap-2">
                 <button
                   onClick={() => setShowCookieBanner(false)}
                   className="px-3 py-1 bg-[#24282C] text-white rounded-lg text-[11px] font-semibold hover:bg-[#3B4248] transition-colors"
                 >
-                  Got It
+                  {t.cookieBanner.gotIt}
                 </button>
                 <a
                   href="/privacy-policy/"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate('/privacy-policy');
+                  }}
                   className="text-[#D86950] font-semibold text-[11px] hover:underline"
                 >
-                  Read Privacy Policy
+                  {t.cookieBanner.readPolicy}
                 </a>
               </div>
             </div>
@@ -198,5 +239,13 @@ export default function App() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }

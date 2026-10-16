@@ -6,6 +6,8 @@
     { "source": "/terms-of-service", "destination": "/terms-of-service/index.html" },
     { "source": "/data-deletion", "destination": "/data-deletion/index.html" },
     { "source": "/support", "destination": "/support/index.html" },
-    { "source": "/store-compliance", "destination": "/store-compliance/index.html" }
+    { "source": "/store-compliance", "destination": "/store-compliance/index.html" },
+    { "source": "/apps/(.*)", "destination": "/index.html" },
+    { "source": "/app/(.*)", "destination": "/index.html" }
   ]
 }
