@@ -19,6 +19,12 @@ import knifeShooterIcon from '../assets/images/knifeshooter_icon.jpg';
 import monikshotPromo from '../assets/images/monikshot_real_promo.png';
 import monikshortsPromo from '../assets/images/monikshorts_real_promo.jpg';
 
+import msealScreenshot from '../assets/images/mseal_real_hero.jpg';
+import msealIcon from '../assets/images/mseal_icon.jpg';
+
+import proxidriveScreenshot from '../assets/images/proxidrive_real_hero.jpg';
+import proxidriveIcon from '../assets/images/proxidrive_icon.jpg';
+
 export const APPS_DATA: AppItem[] = [
   {
     id: 'lich-xua',
@@ -253,6 +259,224 @@ export const APPS_DATA: AppItem[] = [
       pt: {
         title: 'Ding! – Timer de Cozinha Inteligente',
         tagline: 'O timer que sabe exatamente o que você está cozinhando — guia passo a passo para ovos, bife e mais.',
+      },
+    }
+  },
+  {
+    id: 'mseal-batch-watermark',
+    title: 'mSeal - Batch Watermark',
+    tagline: 'Batch photo watermarking for shops and creators — one tap, any number of photos, 100% on-device.',
+    description: 'Protect your photos before you post them. mSeal adds your name, shop info or logo to one photo, a hundred photos, or a whole album with a single tap on Apply. Designed specifically for online sellers, photographers, and content creators. Features Smart Placement to avoid faces and subjects, ready-made shop & hotline templates, 13 curated typography styles, GPS and date stamps, tile and border watermarks, and Siri Shortcuts automation. Original photos remain untouched, and everything processes 100% on your device with zero cloud uploads.',
+    category: 'app',
+    platforms: ['ios'],
+    image: msealScreenshot,
+    icon: msealIcon,
+    accentColor: '#5C826F',
+    status: 'new_release',
+    version: '1.0',
+    ageRating: '4+ (Everyone)',
+    sizeMb: '15.4 MB',
+    storeId: 'id6819053538',
+    bundleId: 'com.monikstudio.mseal',
+    requirements: 'iOS 17.0 or later (iPhone & iPad)',
+    pricing: 'Free with optional mSeal Pro lifetime unlock (No recurring subscriptions)',
+    compatibility: ['iPhone', 'iPad', 'Apple Photos Share Sheet', 'Siri Shortcuts'],
+    whatsNew: 'Version 1.0: Official launch of mSeal with batch watermarking, Smart Placement, shop templates, and offline privacy.',
+    appStoreUrl: 'https://apps.apple.com/us/app/mseal-batch-watermark/id6819053538',
+    tags: ['Photo & Video', 'Watermark', 'Batch Processing', 'E-Commerce', 'Privacy First', 'Siri Shortcuts'],
+    features: [
+      'One tap for any number of photos: select photos or a whole album, tap Apply, and you are done',
+      'Original photos stay completely safe: watermarked copies are saved into a dedicated mSeal album',
+      'Smart Placement: automatically positions watermark away from faces and the main subject',
+      'Made for online sellers: ready-to-use shop name + hotline, product codes (SP001…), copyright, and anti-theft tiles',
+      '100% on-device privacy: your images never leave your iPhone or get uploaded to external servers'
+    ],
+    highlights: [
+      {
+        title: 'Batch Watermarking in One Tap',
+        desc: 'Select dozens or hundreds of photos at once. Apply watermark templates seamlessly without repetitive manual positioning.'
+      },
+      {
+        title: 'Smart Subject & Face Detection',
+        desc: 'Intelligent layout engine analyzes photo composition to keep watermarks clear of human faces and focal points.'
+      },
+      {
+        title: 'Ready-Made Shop & Creator Presets',
+        desc: 'Built-in templates for Shop Name + Hotline, SKU codes, copyright notices, camera EXIF frames, and anti-theft diagonal tiles.'
+      },
+      {
+        title: 'Photo App Share Sheet & Siri Shortcuts',
+        desc: 'Watermark photos directly from the iOS Photos app without opening mSeal, or automate tasks via Apple Shortcuts.'
+      },
+      {
+        title: '100% On-Device Processing',
+        desc: 'No cloud processing, no accounts, and optional 1-switch GPS removal to protect your location privacy.'
+      }
+    ],
+    localizations: {
+      vi: {
+        title: 'mSeal: Chèn Logo & Đóng Dấu Ảnh',
+        tagline: 'Đóng dấu bản quyền ảnh hàng loạt cho chủ shop và nhà sáng tạo — 1 chạm, hàng trăm ảnh, 100% trên máy.',
+        description: 'Bảo vệ hình ảnh sản phẩm trước khi đăng tải. mSeal tự động chèn tên shop, hotline hoặc logo thương hiệu vào 1 ảnh, 100 ảnh hay cả album chỉ với 1 cú chạm. Được thiết kế chuyên biệt cho người bán hàng online và nhiếp ảnh gia: tự động tránh khuôn mặt và chủ thể chính, tạo mã sản phẩm (SP001, SP002…), 13 font chữ tiếng Việt nghệ thuật, đóng dấu ngày giờ, toạ độ GPS và phím tắt Siri. Ảnh gốc giữ nguyên vẹn 100% và xử lý hoàn toàn offline trên điện thoại.',
+        whatsNew: 'Phiên bản 1.0: Ra mắt chính thức mSeal với tính năng đóng dấu ảnh hàng loạt, tự động tránh khuôn mặt, mẫu shop bán hàng và bảo mật tuyệt đối.',
+        features: [
+          '1 chạm cho mọi số lượng ảnh: chọn vài tấm hoặc cả album, bấm Áp dụng là hoàn tất',
+          'Ảnh gốc luôn an toàn tuyệt đối: ảnh đóng dấu lưu riêng vào album mSeal',
+          'Căn chỉnh thông minh: tự động đưa dấu bản quyền tránh khuôn mặt và chủ thể chính',
+          'Dành riêng cho chủ shop: mẫu tên shop + hotline, mã sản phẩm tự tăng (SP001, SP002...), dấu chéo chống trộm',
+          'Bảo mật 100% trên máy: ảnh không bao giờ tải lên mạng, hỗ trợ xóa toạ độ GPS khi xuất ảnh'
+        ],
+        highlights: [
+          {
+            title: 'Đóng Dấu Hàng Loạt Siêu Tốc',
+            desc: 'Chọn hàng trăm ảnh cùng lúc, đóng dấu logo hoặc thông tin bán hàng chỉ trong vài giây.'
+          },
+          {
+            title: 'Tự Động Tránh Mặt & Chủ Thể',
+            desc: 'Thuật toán thông minh nhận diện khuôn mặt và vật thể để đặt watermark ở góc phù hợp nhất.'
+          },
+          {
+            title: 'Mẫu Sẵn Cho Bán Hàng Online',
+            desc: 'Có sẵn mẫu Tên shop + Hotline, mã SKU sản phẩm, dấu chéo mờ chống sao chép ảnh và khung thông số máy ảnh.'
+          },
+          {
+            title: 'Tích Hợp Phím Tắt Siri & Chia Sẻ iOS',
+            desc: 'Chèn dấu ngay từ thư viện ảnh Photos qua bảng chia sẻ hoặc tự động hoá bằng Siri Shortcuts.'
+          },
+          {
+            title: 'Riêng Tư & Không Cần Mạng',
+            desc: 'Hoạt động hoàn toàn trên thiết bị của bạn, không tải ảnh lên đám mây, tùy chọn xoá toạ độ vị trí chụp ảnh.'
+          }
+        ]
+      },
+      ja: {
+        title: 'mSeal: 一括透かし・ロゴ挿入',
+        tagline: '写真の一括透かし入れ・ショップロゴ追加 — ワンタップで何十枚も瞬時に処理、端末内完結。',
+      },
+      zh: {
+        title: 'mSeal: 批量照片水印助手',
+        tagline: '专为电商卖家与创作者打造的批量加水印工具 — 一键应用、智能避开人脸主体、完全离线。',
+      },
+      ko: {
+        title: 'mSeal: 일괄 워터마크 & 로고 추가',
+        tagline: '쇼핑몰과 크리에이터를 위한 대량 사진 워터마크 — 원터치 일괄 적용, 100% 온디바이스 처리.',
+      },
+      es: {
+        title: 'mSeal: Marca de Agua por Lotes',
+        tagline: 'Marca de agua en fotos por lotes para tiendas y creadores — un toque, cualquier cantidad de fotos.',
+      },
+      pt: {
+        title: 'mSeal: Marca d\'Água em Lote',
+        tagline: 'Marca d\'água em fotos em lote para lojas e criadores — um toque, fotos ilimitadas, 100% offline.',
+      },
+    }
+  },
+  {
+    id: 'proxidrive-distance-warning',
+    title: 'ProxiDrive - Distance Warning',
+    tagline: 'Real-time following distance warning and HUD for safer driving — computer vision on your iPhone.',
+    description: 'See how close you are following — before it is too late. ProxiDrive uses your iPhone rear camera and on-device computer vision (no LiDAR, no cloud, nothing leaves your phone) to estimate distance to the vehicle ahead and warn you — on screen, with sound, spoken voice alerts, and haptics — when you follow too closely. Includes Road view with lane markers and live HUD, minimal Drive view, automatic horizon calibration while driving, support for 2-second and 3-second safety rules, and automatic license plate blurring for privacy.',
+    category: 'app',
+    platforms: ['ios'],
+    image: proxidriveScreenshot,
+    icon: proxidriveIcon,
+    accentColor: '#E07A5F',
+    status: 'new_release',
+    version: '1.0',
+    ageRating: '4+ (Everyone)',
+    sizeMb: '120 MB',
+    storeId: 'id6814428545',
+    bundleId: 'com.monikstudio.proxidrive',
+    requirements: 'iOS 17.0 or later (iPhone with camera)',
+    pricing: 'Free (Core safety warnings, time-to-collision & rules 100% free; optional tip/coffee for HUD customization)',
+    compatibility: ['iPhone', 'Windshield Mounts / MagSafe Car Mounts', 'Car Audio via Bluetooth'],
+    whatsNew: 'Version 1.0: Launch of ProxiDrive with computer vision distance estimation, dual Road/Drive HUD, and audio-haptic collision alerts.',
+    appStoreUrl: 'https://apps.apple.com/us/app/proxidrive-distance-warning/id6814428545',
+    tags: ['Navigation', 'Utilities', 'Driving Assistant', 'Computer Vision', 'Car Safety', 'HUD'],
+    features: [
+      'Real-time distance estimation: tracks the car ahead and calculates time-to-collision using on-device computer vision',
+      'Multi-sensory collision alerts: instant visual warnings, audio cues, spoken voice alerts, and haptics when following too close',
+      'Dual display modes: comprehensive Road view with lane tracking and HUD, plus distraction-free Drive view with big distance readouts',
+      'Auto-calibration: calibrates camera angle and mounting height automatically while driving with zero hassle',
+      'Privacy by design: automatic license plate blurring, zero video recording or storage, and coarse location only'
+    ],
+    highlights: [
+      {
+        title: 'On-Device Neural Computer Vision',
+        desc: 'Analyzes live road video frames strictly on Apple Silicon without requiring LiDAR or any remote server connections.'
+      },
+      {
+        title: 'Time-to-Collision & Safe Following Rules',
+        desc: 'Calculates dynamic safety buffer using international 2-second and 3-second stopping rules based on your current speed.'
+      },
+      {
+        title: 'Spoken Alerts & Bluetooth Car Audio',
+        desc: 'Crisp audible warnings and voice cues pipe cleanly through your car speakers or iPhone speakers.'
+      },
+      {
+        title: 'Automatic Mounting Calibration',
+        desc: 'Dynamically detects the road horizon and phone tilt angle as you drive, eliminating complicated manual alignment.'
+      },
+      {
+        title: 'Automatic License Plate Blurring',
+        desc: 'Protects other drivers privacy with real-time on-screen plate blurring while keeping the dashboard clear.'
+      }
+    ],
+    localizations: {
+      vi: {
+        title: 'ProxiDrive: Cảnh Báo Khoảng Cách Xe',
+        tagline: 'Cảnh báo giữ khoảng cách an toàn và màn hình HUD khi lái xe — thị giác máy tính thông minh trên iPhone.',
+        description: 'Biết rõ bạn đang bám đuôi xe phía trước ở khoảng cách bao xa — trước khi quá muộn. ProxiDrive tận dụng camera sau của iPhone và thị giác máy tính trực tiếp trên máy (không cần LiDAR, không tải video lên mạng) để ước tính cự ly đến xe phía trước và phát cảnh báo bằng hình ảnh, âm thanh, giọng nói và độ rung khi bạn đi quá gần. Hỗ trợ hiển thị làn đường, màn hình HUD tốc độ, chế độ Lái xe tối giản số to, tự động cân chỉnh góc nghiêng và làm mờ biển số xe khác để đảm bảo riêng tư.',
+        whatsNew: 'Phiên bản 1.0: Ra mắt ProxiDrive với công nghệ đo khoảng cách xe bằng camera, cảnh báo va chạm âm thanh/giọng nói và màn hình lái xe HUD.',
+        features: [
+          'Ước tính khoảng cách thời gian thực: nhận diện xe phía trước và tính thời gian va chạm bằng AI trên máy',
+          'Cảnh báo đa giác quan: âm thanh chuông, giọng nói tiếng Việt, cảnh báo màn hình và rung khi bám quá sát',
+          '2 chế độ hiển thị: chế độ Camera đường có vạch làn & HUD, và chế độ Lái xe tối giản với chữ số to dễ quan sát',
+          'Tự động cân chỉnh camera: tự động nhận diện góc nghiêng chân trời khi xe lăn bánh, không cần chỉnh tay phức tạp',
+          'Bảo mật tuyệt đối: tự động làm mờ biển số xe phía trước, không ghi hình lưu trữ và không gửi dữ liệu ra ngoài'
+        ],
+        highlights: [
+          {
+            title: 'Thị Giác Máy Tính Xử Lý Trên Chip',
+            desc: 'Phân tích hình ảnh giao thông trực tiếp trên vi xử lý iPhone, không cần kết nối mạng hay cảm biến LiDAR.'
+          },
+          {
+            title: 'Quy Tắc An Toàn 2 Giây & 3 Giây',
+            desc: 'Tự động tính toán khoảng cách phanh an toàn tương ứng với vận tốc thực tế của xe theo chuẩn an toàn giao thông.'
+          },
+          {
+            title: 'Cảnh Báo Âm Thanh & Giọng Nói Qua Loa Ô Tô',
+            desc: 'Phát lời nhắc nhở rõ ràng qua hệ thống loa xe hơi kết nối Bluetooth hoặc loa ngoài của điện thoại.'
+          },
+          {
+            title: 'Tự Động Cân Chỉnh Góc Kẹp Điện Thoại',
+            desc: 'Tự động học góc đặt máy và đường chân trời trong lúc di chuyển, lắp điện thoại lên giá kẹp là chạy ngay.'
+          },
+          {
+            title: 'Tự Động Che Biển Số Xe',
+            desc: 'Bảo vệ quyền riêng tư cho các phương tiện xung quanh bằng thuật toán làm mờ biển số trực tiếp trên màn hình.'
+          }
+        ]
+      },
+      ja: {
+        title: 'ProxiDrive: 車間距離警告＆HUD',
+        tagline: 'リアルタイムの車間距離警告とスマートHUDで安全運転をサポート — iPhoneのオンデバイス画像認識。',
+      },
+      zh: {
+        title: 'ProxiDrive: 车距预警与驾驶HUD',
+        tagline: '实时跟车安全车距预警与抬头显示 — iPhone本地端侧计算机视觉，保障行车安全。',
+      },
+      ko: {
+        title: 'ProxiDrive: 안전 차간거리 경고 & HUD',
+        tagline: '실시간 앞차 거리 감지 및 안전 경고 헤드업 디스플레이 — 온디바이스 컴퓨터 비전 탑재.',
+      },
+      es: {
+        title: 'ProxiDrive: Alerta de Distancia',
+        tagline: 'Aviso de distancia de seguridad en tiempo real y HUD para una conducción más segura con visión artificial.',
+      },
+      pt: {
+        title: 'ProxiDrive: Alerta de Distância',
+        tagline: 'Alerta de distância segura em tempo real e HUD para direção defensiva com visão computacional.',
       },
     }
   },
@@ -705,6 +929,6 @@ export const APPS_DATA: AppItem[] = [
 export const STUDIO_METRICS = [
   { value: '1.2M+', label: 'Global Mobile Downloads' },
   { value: '4.9 ★', label: 'Average User Rating' },
-  { value: '7', label: 'Published Games, Apps & Extensions' },
+  { value: '9', label: 'Published Games, Apps & Extensions' },
   { value: '100%', label: 'Privacy & Store Compliant' }
 ];
