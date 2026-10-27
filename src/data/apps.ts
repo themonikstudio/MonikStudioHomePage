@@ -25,6 +25,9 @@ import msealIcon from '../assets/images/mseal_icon.jpg';
 import proxidriveScreenshot from '../assets/images/proxidrive_real_hero.jpg';
 import proxidriveIcon from '../assets/images/proxidrive_icon.jpg';
 
+import mekanikScreenshot from '../assets/images/mekanik_real_hero.jpg';
+import mekanikIcon from '../assets/images/mekanik_icon.jpg';
+
 export const APPS_DATA: AppItem[] = [
   {
     id: 'lich-xua',
@@ -767,6 +770,111 @@ export const APPS_DATA: AppItem[] = [
     }
   },
   {
+    id: 'mekanik-physics-puzzle',
+    title: 'Mekanik: Physics Puzzle',
+    tagline: 'Engineering blueprint physics puzzle — drag, notch, release, and guide the ball through deterministic chain reactions.',
+    description: 'Mekanik is a physics puzzle drawn like a page from an engineering textbook: ink lines, a paper grid, grey weights — and a single blue trajectory. Every puzzle uses one intuitive gesture: drag a spring, a pendulum or a weight to a notch, let go, and watch the mechanism do the rest. Your goal: get the ball to come to rest inside the dashed circle. Features 50 handcrafted puzzles across springs, collisions, pendulums, pulleys, and combined multi-step systems, plus a bonus chapter with chaotic double pendulums. Ghost trajectory trails let you reason, compare, and adjust with every throw. 100% offline, zero artificial timers, no energy meters.',
+    category: 'game',
+    platforms: ['ios'],
+    image: mekanikScreenshot,
+    icon: mekanikIcon,
+    accentColor: '#3B82F6',
+    status: 'new_release',
+    version: '1.0',
+    ageRating: '4+ (Everyone)',
+    sizeMb: '7.6 MB',
+    storeId: 'id6821027419',
+    bundleId: 'com.monikstudio.mekanik',
+    requirements: 'iOS 17.0 or later (iPhone & iPad)',
+    pricing: 'Free to play with optional Remove Ads and coin packs',
+    compatibility: ['iPhone', 'iPad'],
+    whatsNew: 'Version 1.0: Debut release of Mekanik with 50 handcrafted mechanical physics puzzles, chaotic double pendulums, ghost trajectories, and 14 languages.',
+    appStoreUrl: 'https://apps.apple.com/us/app/mekanik-physics-puzzle/id6821027419',
+    tags: ['Physics Puzzle', 'Engineering Blueprint', 'Brain Teaser', 'Chain Reaction', 'Minimalist', 'Offline'],
+    features: [
+      'One intuitive gesture: drag a spring, pendulum, or counterweight to a notch, release, and let mechanics do the rest',
+      'Deterministic physics engine: identical releases yield identical outcomes so you can think, observe, and adjust',
+      '50 handcrafted engineering puzzles spanning parabolic launches, elastic collisions, pendulums, pulleys, and belts',
+      'Ghost trajectory history: previous releases linger as faint blueprint lines to help you compare attempts',
+      'Bonus chaotic pendulum chapter exploring unpredictable double and triple pendulum physics'
+    ],
+    highlights: [
+      {
+        title: 'One-Gesture Control & Snap Notches',
+        desc: 'Pull, snap to notches, and release. Every puzzle provides a small, elegant set of choices you can reason about.'
+      },
+      {
+        title: 'Deterministic Textbook Physics',
+        desc: 'True kinetic physics: the same release always gives the exact same result. Watch, think, and solve without random luck.'
+      },
+      {
+        title: '50 Handcrafted Mechanical Stages',
+        desc: 'Progress through springs, parabolas, colliding heavy/light balls, pendulums, counterweights, and multi-part chain reactions.'
+      },
+      {
+        title: 'Chaotic Double Pendulum Bonus',
+        desc: 'Unlock a bonus chapter featuring double and triple pendulums: release weights and watch chaotic physics draw mesmerising art.'
+      },
+      {
+        title: 'Mindful, Distraction-Free Design',
+        desc: 'No in-game text or tutorials, no artificial timers or energy systems. Play at your own pace offline on iPhone and iPad.'
+      }
+    ],
+    localizations: {
+      vi: {
+        title: 'Mekanik: Giải Đố Vật Lý',
+        tagline: 'Giải đố vật lý tối giản như bản vẽ kỹ thuật — kéo lò xo, chỉnh con lắc, thả tay và ngắm chuỗi phản ứng dây chuyền kỳ thú.',
+        description: 'Mekanik là tựa game giải đố vật lý được thiết kế tao nhã như một trang bản vẽ kỹ thuật: nét mực sắc nét, lưới giấy ca-rô, quả nặng xám và quỹ đạo màu xanh thanh lịch. Mỗi câu đố chỉ cần một thao tác duy nhất: kéo lò xo, con lắc hoặc quả nặng vào từng khấc định vị rồi thả tay ra để hệ cơ học tự chuyển động. Mục tiêu: đưa quả bóng dừng hẳn bên trong vòng tròn nét đứt. Trải nghiệm 50 màn chơi thủ công tinh tế, đường nét bóng mờ ghi nhớ lần bắn trước, và chương đặc biệt khám phá con lắc hỗn loạn. Hoàn toàn thư thái, không áp lực thời gian hay điểm thể lực.',
+        whatsNew: 'Phiên bản 1.0: Ra mắt chính thức Mekanik với 50 màn giải đố cơ học thủ công, con lắc đôi hỗn loạn, lưu vết quỹ đạo và hỗ trợ 14 ngôn ngữ.',
+        features: [
+          'Thao tác 1 chạm trực quan: kéo quả nặng hoặc lò xo vào từng khấc rồi thả tay để hệ cơ chuyển động',
+          'Vật lý tất định chuẩn xác: cùng một góc kéo luôn cho cùng một kết quả, giúp bạn dễ dàng suy luận và tinh chỉnh',
+          '50 màn giải đố cơ khí độc đáo: từ lò xo, va chạm bi lăn, con lắc đơn đến hệ ròng rọc và dây curoa phối hợp',
+          'Lưu vết quỹ đạo mờ: đường bay của lần thả trước được vẽ mờ trên bản vẽ để bạn so sánh và điều chỉnh',
+          'Chương mở rộng con lắc hỗn loạn: thả con lắc đôi và ngắm nhìn lý thuyết hỗn loạn tự vẽ nên những bức tranh tuyệt mỹ'
+        ],
+        highlights: [
+          {
+            title: 'Thao Tác Kéo & Thả Định Khấc',
+            desc: 'Mỗi câu đố chia sẵn các khấc định vị rõ ràng, tạo ra tập lựa chọn hữu hạn để bạn thỏa sức tư duy logic.'
+          },
+          {
+            title: 'Vật Lý Kỹ Thuật Tất Định',
+            desc: 'Không phụ thuộc yếu tố may rủi: lực và góc thả giống nhau sẽ luôn mang lại cùng một chuyển động cơ học.'
+          },
+          {
+            title: '50 Câu Đố Cơ Khí Thủ Công',
+            desc: 'Chinh phục các chương bắn góc parabola, va chạm đàn hồi, thế năng con lắc và hệ thống ròng rọc nhiều tầng.'
+          },
+          {
+            title: 'Bản Vẽ Nghệ Thuật Tối Giản',
+            desc: 'Phong cách bản vẽ thiết kế cổ điển không chữ rối mắt, không đếm ngược thời gian, không giới hạn thể lực.'
+          }
+        ]
+      },
+      ja: {
+        title: 'Mekanik: 物理パズル',
+        tagline: '工学設計図のようなミニマルな物理パズル — 引いて、離して、連鎖反応を楽しむ。',
+      },
+      zh: {
+        title: 'Mekanik: 物理谜题',
+        tagline: '如工程图纸般优雅的极简物理解谜游戏 — 拖动、卡槽对齐、松手触发绝妙的连锁机械反应。',
+      },
+      ko: {
+        title: 'Mekanik: 물리 퍼즐',
+        tagline: '엔지니어링 청사진 스타일의 미니멀 물리 퍼즐 — 당기고 놓아서 완성하는 연쇄 반응.',
+      },
+      es: {
+        title: 'Mekanik: Rompecabezas de Física',
+        tagline: 'Puzles de física con estética de planos de ingeniería — arrastra, encaja y suelta para crear reacciones en cadena.',
+      },
+      pt: {
+        title: 'Mekanik: Quebra-Cabeça de Física',
+        tagline: 'Quebra-cabeça de física em estilo de planta de engenharia — puxe, solte e observe as reações em cadeia.',
+      },
+    }
+  },
+  {
     id: 'monikshot-screenshot',
     title: 'MonikShot: Easy Screenshot',
     tagline: 'Capture, crop, blur sensitive info, and annotate screenshots directly in Chrome with zero tracking.',
@@ -929,6 +1037,6 @@ export const APPS_DATA: AppItem[] = [
 export const STUDIO_METRICS = [
   { value: '1.2M+', label: 'Global Mobile Downloads' },
   { value: '4.9 ★', label: 'Average User Rating' },
-  { value: '9', label: 'Published Games, Apps & Extensions' },
+  { value: '10', label: 'Published Games, Apps & Extensions' },
   { value: '100%', label: 'Privacy & Store Compliant' }
 ];

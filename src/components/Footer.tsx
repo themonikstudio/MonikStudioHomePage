@@ -108,6 +108,42 @@ export const Footer: React.FC<FooterProps> = ({
                     <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://apps.apple.com/us/app/mekanik-physics-puzzle/id6821027419"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>Mekanik: Physics Puzzle</span>
+                    <span className="text-[9px] px-1 py-0.5 bg-[#3B82F6]/20 text-[#60A5FA] rounded font-mono font-medium">iOS Game</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#60A5FA] transition-colors" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://apps.apple.com/us/app/mseal-batch-watermark/id6819053538"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>mSeal Watermark</span>
+                    <span className="text-[9px] px-1 py-0.5 bg-[#779585]/20 text-[#779585] rounded font-mono font-medium">iOS</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://apps.apple.com/us/app/proxidrive-distance-warning/id6814428545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>ProxiDrive HUD</span>
+                    <span className="text-[9px] px-1 py-0.5 bg-[#779585]/20 text-[#779585] rounded font-mono font-medium">iOS</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#CDB07B] transition-colors" />
+                  </a>
+                </li>
               </ul>
               <ul className="space-y-2">
                 <li className="text-[#D86950] font-semibold text-[11px] uppercase tracking-wider">

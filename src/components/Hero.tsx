@@ -2,6 +2,7 @@ import React from 'react';
 import { MonikCubeIcon } from './MonikLogo';
 import { Smartphone, ArrowRight, Sparkles, ShieldCheck, Chrome } from 'lucide-react';
 import { useI18n } from '../i18n/LanguageContext';
+import { APPS_DATA } from '../data/apps';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -14,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
   const metrics = [
     { value: '1.2M+', label: t.hero.metricDownloads },
     { value: '4.9 ★', label: t.hero.metricRating },
-    { value: '7', label: t.hero.metricProducts },
+    { value: APPS_DATA.length.toString(), label: t.hero.metricProducts },
     { value: '100%', label: t.hero.metricPrivacy },
   ];
 
