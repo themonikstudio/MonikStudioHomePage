@@ -20,7 +20,108 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">2. Information We Collect</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">2. Apps Covered</h4>
+          <p>
+            This Privacy Policy applies to all applications, games, and browser extensions published by Monik Studio, including but not limited to:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 mt-3">
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">SoberProof: Quit Drinking</strong>
+              <span className="text-[#6B7280]">iOS & Apple Watch</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">Lịch Xưa: Lunar Calendar</strong>
+              <span className="text-[#6B7280]">iOS & Android</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">mSeal: Batch Watermark</strong>
+              <span className="text-[#6B7280]">iOS (iPhone & iPad)</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">ProxiDrive: Distance Warning</strong>
+              <span className="text-[#6B7280]">iOS (iPhone & iPad)</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">Mekanik: Physics Puzzle</strong>
+              <span className="text-[#6B7280]">iOS (iPhone & iPad)</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">Ding: Smart Habit Tracker</strong>
+              <span className="text-[#6B7280]">iOS & Android</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">LyNote: Minimalist Notebook</strong>
+              <span className="text-[#6B7280]">iOS (Universal)</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">DocuShelf: Smart Doc Scanner</strong>
+              <span className="text-[#6B7280]">iOS (Universal)</span>
+            </div>
+            <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB] text-xs">
+              <strong className="text-[#24282C] block font-semibold">Knife Shooter: Hit Top</strong>
+              <span className="text-[#6B7280]">iOS & Android</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-5 bg-[#FAF8F5] rounded-2xl border-2 border-[#EBE5DB] space-y-3.5">
+          <div className="border-b border-[#E0D9CE] pb-3">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#779585]/15 text-[#5C826F] text-xs font-semibold uppercase tracking-wider mb-1">
+              App-Specific Privacy Disclosure
+            </div>
+            <h4 className="text-xl font-extrabold text-[#24282C]">3. SoberProof: Quit Drinking</h4>
+            <p className="text-xs sm:text-sm text-[#5A626A] mt-1">
+              SoberProof helps adults drink less or quit alcohol. It has no account, no ads and no tracking.
+            </p>
+          </div>
+
+          <div className="space-y-3 text-xs sm:text-sm">
+            <div>
+              <strong className="text-[#24282C]">Data stored only on your device.</strong> Your goal and plan, drinks and alcohol-free days, check-ins, cravings, journal, reasons (including an optional photo), event plans, savings goal, buddy&apos;s name and phone number, and conversations with the coach are stored on your iPhone (and your Apple Watch, if you use it). We do not receive this data.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Apple Health.</strong> With your permission, SoberProof reads sleep, resting heart rate, heart rate variability, steps and body weight to compare alcohol-free days with drinking days, and can save drinks you log to Apple Health as &quot;Alcoholic Beverages&quot;. Health data is processed only on your device. It is never sent to us or to any third party, never used for advertising or marketing, and never sold. You can change Health permissions at any time in the Health app.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Calendar.</strong> If you allow calendar access, SoberProof reads the titles and times of upcoming events on your device to suggest making a plan before parties and dinners. Calendar data never leaves your device.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">AI coach.</strong> On supported devices the coach uses Apple&apos;s on-device language model. Your messages are processed on your device and are not sent to us or to any AI provider.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">iCloud sync (optional, off by default).</strong> If you turn it on, your SoberProof data syncs through your own private iCloud database (Apple CloudKit). We cannot access it. Data read from Apple Health is never synced to iCloud; it stays on your device.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Purchases.</strong> Subscriptions and purchases are processed by Apple; we never receive payment details. SoberProof uses RevenueCat to validate purchases and unlock Premium. RevenueCat receives your App Store purchase history and a random anonymous app user ID; it does not receive your name, email, health data or anything you write in the app. RevenueCat&apos;s privacy policy:{' '}
+              <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#D86950] underline font-medium">
+                https://www.revenuecat.com/privacy
+              </a>
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">No analytics, ads or tracking.</strong> SoberProof contains no analytics, crash-reporting or advertising SDKs, does not use the advertising identifier and does not track you across apps or websites.
+            </div>
+
+            <div>
+              <strong className="text-[#24282C]">Your choices.</strong> Export all your data at any time (Settings › Export, JSON and CSV). Delete all your data at any time (Settings › Delete all data). Deleting the app also removes its data from your device.
+            </div>
+
+            <div className="p-3 bg-white rounded-xl border border-[#E0D9CE]">
+              <strong className="text-[#24282C] block mb-1">Not medical care.</strong>
+              <p className="text-[#5A626A]">
+                SoberProof is a self-help tool, not medical care. If you drink heavily every day, stopping suddenly can be dangerous — talk to a doctor first.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">4. Information We Collect</h4>
           <ul className="list-disc pl-5 space-y-1.5 mt-2">
             <li>
               <strong className="text-[#24282C]">Device & Technical Telemetry:</strong> Device model, operating system version, screen resolution, locale language setting, IP address (truncated for coarse geographic analytics), and battery/memory diagnostics.
@@ -39,7 +140,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">3. Third-Party Services & SDK Integrations</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">5. Third-Party Services & SDK Integrations</h4>
           <p>To enable online leaderboards, cloud backups, and stable mobile performance, our titles may integrate the following vetted service providers:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
             <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#EBE5DB]">
@@ -62,7 +163,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">4. Advertising, Tracking and Consent</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">6. Advertising, Tracking and Consent</h4>
           <p>
             Some of our apps are free and supported by ads. Apps without ads do not include any advertising SDK, and this section does not apply to them.
           </p>
@@ -138,7 +239,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">5. Children&apos;s Privacy (COPPA & Google Play Families Policy)</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">7. Children&apos;s Privacy (COPPA & Google Play Families Policy)</h4>
           <p>
             We treat young players&apos; safety with utmost care. Titles labeled as &quot;Everyone&quot; (4+) comply with the Children&apos;s Online Privacy Protection Act (COPPA), the EU GDPR-K, and the Google Play Families Policy. We do not knowingly collect personal information from children under 13 (or under 16 in certain EU jurisdictions).
           </p>
@@ -148,7 +249,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">6. User Rights & Data Deletion (GDPR & CCPA/CPRA)</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">8. User Rights & Data Deletion (GDPR & CCPA/CPRA)</h4>
           <p>Under applicable global privacy laws, you possess the right to:</p>
           <ul className="list-disc pl-5 space-y-1 mt-2">
             <li>Request confirmation of whether we hold personal telemetry concerning you.</li>
@@ -171,7 +272,7 @@ export const POLICIES_DATA: PolicyDocument[] = [
         </div>
 
         <div>
-          <h4 className="text-lg font-bold text-[#24282C] mb-2">7. Contact Information</h4>
+          <h4 className="text-lg font-bold text-[#24282C] mb-2">9. Contact Information</h4>
           <p>
             If you have any questions, feedback, or inquiries regarding our privacy standards, please contact our designated privacy officer at:
           </p>
