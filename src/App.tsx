@@ -11,6 +11,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AppShowcase } from './components/AppShowcase';
 import { AboutStudio } from './components/AboutStudio';
+import { Design3DSection } from './components/Design3DSection';
 import { Footer } from './components/Footer';
 import { LegalPage } from './components/LegalPage';
 import { AppLandingPage } from './components/AppLandingPage';
@@ -186,6 +187,7 @@ function AppContent() {
           onNavigateToPolicy={(path) => navigate(path)} 
           onNavigateToApp={(appId) => navigate(`/apps/${appId}`)}
         />
+        <Design3DSection />
         <AboutStudio />
       </main>
 

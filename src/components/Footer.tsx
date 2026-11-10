@@ -171,6 +171,44 @@ export const Footer: React.FC<FooterProps> = ({
                     <ExternalLink size={10} className="text-[#808892] group-hover:text-[#D86950] transition-colors" />
                   </a>
                 </li>
+                <li className="text-[#00AE42] font-semibold text-[11px] uppercase tracking-wider pt-2">
+                  3D Design & Print
+                </li>
+                <li>
+                  <a
+                    href="https://makerworld.com/en/@monikstudio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>MakerWorld</span>
+                    <span className="text-[9px] px-1 py-0.5 bg-[#00AE42]/20 text-[#00AE42] rounded font-mono font-medium">Bambu</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#00AE42] transition-colors" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.printables.com/@MonikStudio_5200121"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>Printables</span>
+                    <span className="text-[9px] px-1 py-0.5 bg-[#FA6831]/20 text-[#FA6831] rounded font-mono font-medium">Prusa</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#FA6831] transition-colors" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.makeronline.com/en/user/personalInfo/53333178-35f1-4434-913f-27316581346b.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors inline-flex items-center gap-1 group"
+                  >
+                    <span>MakerOnline</span>
+                    <ExternalLink size={10} className="text-[#808892] group-hover:text-[#60A5FA] transition-colors" />
+                  </a>
+                </li>
                 <li className="pt-1">
                   <a
                     href="/#showcase"

@@ -55,6 +55,9 @@ export const AboutStudio: React.FC = () => {
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#D86950]">
                 {t.about.tagChrome}
               </span>
+              <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#00AE42]">
+                3D Design & Print
+              </span>
               <span className="px-3 py-1.5 rounded-xl bg-[#FAF8F5] border border-[#EAE4DA] text-xs font-semibold text-[#779585]">
                 {t.about.tagNative}
               </span>

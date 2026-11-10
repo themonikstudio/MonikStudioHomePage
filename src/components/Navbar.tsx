@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MonikLogo } from './MonikLogo';
-import { Menu, X, Sparkles, Layers, Info } from 'lucide-react';
+import { Menu, X, Sparkles, Layers, Info, Box } from 'lucide-react';
 import { useI18n } from '../i18n/LanguageContext';
 import { LanguageSelector } from './LanguageSelector';
 
@@ -30,6 +30,11 @@ export const Navbar: React.FC<NavbarProps> = ({
       id: 'showcase',
       label: t.nav.catalog,
       icon: Layers,
+    },
+    {
+      id: 'design-3d',
+      label: t.nav.design3d,
+      icon: Box,
     },
     {
       id: 'about',

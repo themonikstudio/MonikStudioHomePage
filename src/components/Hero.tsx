@@ -1,6 +1,6 @@
 import React from 'react';
 import { MonikCubeIcon } from './MonikLogo';
-import { Smartphone, ArrowRight, Sparkles, ShieldCheck, Chrome } from 'lucide-react';
+import { Smartphone, ArrowRight, Sparkles, ShieldCheck, Chrome, Box } from 'lucide-react';
 import { useI18n } from '../i18n/LanguageContext';
 import { APPS_DATA } from '../data/apps';
 
@@ -102,6 +102,10 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate, onNavigateToPolicy }) =>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/80 border border-[#EBE5DB] shadow-2xs">
               <Chrome size={14} className="text-[#D86950]" />
               <span className="font-semibold text-[#24282C]">Chrome Web Store (V3)</span>
+            </div>
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/80 border border-[#EBE5DB] shadow-2xs">
+              <Box size={14} className="text-[#00AE42]" />
+              <span className="font-semibold text-[#24282C]">3D Design & Print</span>
             </div>
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/80 border border-[#EBE5DB] shadow-2xs">
               <ShieldCheck size={14} className="text-[#779585]" />

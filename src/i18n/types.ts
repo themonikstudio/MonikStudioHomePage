@@ -21,12 +21,32 @@ export interface TranslationDictionary {
   nav: {
     home: string;
     catalog: string;
+    design3d: string;
     about: string;
     privacy: string;
     terms: string;
     support: string;
     storeCompliance: string;
     selectLanguage: string;
+  };
+  design3d: {
+    badge: string;
+    heading: string;
+    subheading: string;
+    exploreProfiles: string;
+    downloadModels: string;
+    platformsTitle: string;
+    featuredModelsTitle: string;
+    featuredModelsDesc: string;
+    viewOnMakerWorld: string;
+    viewOnPrintables: string;
+    viewOnMakerOnline: string;
+    freeDownload: string;
+    specsTitle: string;
+    material: string;
+    infill: string;
+    supports: string;
+    layerHeight: string;
   };
   hero: {
     badge: string;
